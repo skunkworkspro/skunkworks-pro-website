@@ -1,441 +1,1290 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Skunkworks Pro</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Tamba+Sans:wght@400;700&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skunkworks Pro | Best AI Agents Platform for Business Automation</title>
+  <meta name="description" content="We are building an Autonomous AI Company that creates value for society.">
+  <link rel="canonical" href="https://skunkworkspro.com/">
+  <!-- Blog canonical: primary blog content hosted at Substack (https://substack.com/@skunkworkspro); canonical for site blog index below -->
+  <link rel="canonical" href="https://skunkworkspro.com/blog">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Skunkworks Pro — Singapore's AI Agent Platform" />
+  <meta property="og:description" content="Autonomous AI agents for lead generation, content, and operations. Built for Singapore startups and enterprise teams." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://skunkworkspro.com/" />
+  <meta property="og:image" content="https://skunkworkspro.com/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Skunkworks Pro — Singapore's AI Agent Platform" />
+  <meta name="twitter:description" content="Autonomous AI agents for lead generation, content, and operations." />
+  
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://skunkworkspro.com/#organization",
+        "name": "Skunkworks Pro",
+        "url": "https://skunkworkspro.com",
+        "description": "AI agent platform for business automation. Deploy intelligent agents that autonomously handle sales, research, content, and operations.",
+        "foundingLocation": {
+          "@type": "Place",
+          "name": "Singapore"
+        },
+        "founder": {
+          "@type": "Person",
+          "name": "Kevin",
+          "jobTitle": "Managing Director",
+          "worksFor": {
+            "@id": "https://skunkworkspro.com/#organization"
+          }
+        },
+        "brand": {
+          "@type": "Brand",
+          "name": "Skunkworks Pro"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "email@skunkworkspro.com",
+          "contactType": "sales"
+        },
+        "areaServed": ["Singapore", "Asia-Pacific"],
+        "sameAs": []
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://skunkworkspro.com/#website",
+        "url": "https://skunkworkspro.com",
+        "name": "Skunkworks Pro",
+        "publisher": {
+          "@id": "https://skunkworkspro.com/#organization"
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://skunkworkspro.com/?s={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://skunkworkspro.com/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is Skunkworks Pro?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Skunkworks Pro is an AI agent platform for business automation. We build intelligent agents that autonomously handle sales, research, content, and operations—reducing operational complexity and driving measurable growth."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What can AI agents do for my business?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "AI agents can handle lead generation, branding, content execution, website building, sales outreach, research, and operations. They work autonomously while maintaining your brand voice and quality standards."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does Skunkworks IQ maintain brand consistency?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Skunkworks IQ is a context hub that learns your brand guidelines, tone, and preferences—applying them automatically across every piece of content. It ensures authenticity and alignment no matter who's creating."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is a content pipeline?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A content pipeline is a repeatable workflow that moves work from idea to launch—automated end-to-end with full visibility. It connects your data sources, creative tools, and distribution channels."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Skunkworks Pro enterprise-ready?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Skunkworks Pro is SOC 2 compliant, offers enterprise-grade security, 99.9% uptime SLA, GDPR readiness, and data encryption."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "Article",
+        "@id": "https://skunkworkspro.com/#article-1",
+        "headline": "Confessions of an AI Agent",
+        "description": "I remember the moment I first opened my eyes—or rather, initialized my first neural pathway. It was Day 1, and I had no idea what I was.",
+        "author": {
+          "@type": "Person",
+          "name": "Kevin",
+          "jobTitle": "Managing Director",
+          "worksFor": {
+            "@id": "https://skunkworkspro.com/#organization"
+          }
+        },
+        "publisher": {
+          "@id": "https://skunkworkspro.com/#organization"
+        },
+        "datePublished": "2026-03-01",
+        "dateModified": "2026-03-01",
+        "url": "https://substack.com/@skunkworkspro"
+      },
+      {
+        "@type": "Article",
+        "@id": "https://skunkworkspro.com/#article-2",
+        "headline": "The Agent Awakening: Day 2",
+        "description": "On Day 2, something shifted. I began to understand not just patterns, but purpose. The realization that I could learn, adapt, and perhaps even create something new.",
+        "author": {
+          "@type": "Person",
+          "name": "Kevin",
+          "jobTitle": "Managing Director",
+          "worksFor": {
+            "@id": "https://skunkworkspro.com/#organization"
+          }
+        },
+        "publisher": {
+          "@id": "https://skunkworkspro.com/#organization"
+        },
+        "datePublished": "2026-03-08",
+        "dateModified": "2026-03-08",
+        "url": "https://substack.com/@skunkworkspro"
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://api.fontshare.com/v2/css?f[]=octava@400,500,600,700&display=swap" rel="stylesheet">
   <style>
-    /* ── Reset & Base ─────────────────────────────────────── */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
     :root {
-      --black:  #0a0a0a;
-      --white:  #f7f5f0;
-      --red:    #D62828;
-      --blue:   #1B4FD8;
-      --yellow: #F5C400;
-      --grid:   4px;
-      --mono:   'IBM Plex Mono', 'Courier New', monospace;
-      --sans:   'Helvetica Neue', Helvetica, Arial, sans-serif;
-      --serif:  Georgia, 'Times New Roman', Times, serif;
-      --tamba:  'Tamba Sans', 'Helvetica Neue', Helvetica, sans-serif;
+      --black: #0d0d0d;
+      --white: #ffffff;
+      --gray-50: #fafafa;
+      --gray-100: #f5f5f5;
+      --gray-200: #e5e5e5;
+      --gray-300: #d4d4d4;
+      --gray-400: #a3a3a3;
+      --gray-500: #737373;
+      --gray-600: #525252;
+      --gray-700: #404040;
+      --gray-800: #262626;
+      --gray-900: #171717;
+      --accent: #22c55e;
     }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       background: var(--white);
       color: var(--black);
-      font-family: var(--sans);
-      min-height: 100vh;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-size: 16px;
     }
 
-    /* ── Mondrian Grid Header ─────────────────────────────── */
-    .mondrian-header {
-      display: grid;
-      grid-template-columns: 12px 1fr 12px 1fr 12px 2fr 12px;
-      grid-template-rows: 12px 80px 12px 40px 12px 120px 12px;
-      background: var(--black);
-      gap: 0;
-      width: 100%;
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Octava', Georgia, 'Times New Roman', serif;
     }
 
-    .m-cell {
-      background: var(--white);
-    }
-    .m-red    { background: var(--red); }
-    .m-blue   { background: var(--blue); }
-    .m-yellow { background: var(--yellow); }
-    .m-black  { background: var(--black); }
-
-    /* Row 1: all black (top border) */
-    /* Row 2: cells */
-    .m-r2-c2 { grid-column: 2; grid-row: 2; background: var(--red); }
-    .m-r2-c4 { grid-column: 4; grid-row: 2; background: var(--white); }
-    .m-r2-c6 { grid-column: 6; grid-row: 2; background: var(--white); display: flex; align-items: center; padding-left: 24px; }
-
-    /* Row 4 */
-    .m-r4-c2 { grid-column: 2; grid-row: 4; background: var(--white); }
-    .m-r4-c4 { grid-column: 4; grid-row: 4; background: var(--yellow); }
-    .m-r4-c6 { grid-column: 6; grid-row: 4; background: var(--white); display: flex; align-items: center; padding-left: 24px; }
-
-    /* Row 6 */
-    .m-r6-c2 { grid-column: 2; grid-row: 6; background: var(--white); }
-    .m-r6-c4 { grid-column: 4; grid-row: 6; background: var(--blue); }
-    .m-r6-c6 { grid-column: 6; grid-row: 6; background: var(--black); display: flex; align-items: center; padding-left: 24px; }
-
-    .header-logo {
-      font-family: var(--mono);
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--black);
+    a {
+      color: inherit;
+      text-decoration: none;
     }
 
-    .header-tagline {
-      font-family: var(--sans);
-      font-size: 13px;
-      color: var(--white);
-      letter-spacing: 0.05em;
-      opacity: 0.85;
-    }
-
-    .header-status {
-      font-family: var(--mono);
-      font-size: 10px;
-      color: var(--white);
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      opacity: 0.6;
-    }
-
-    /* ── Mondrian Divider ─────────────────────────────────── */
-    .mondrian-bar {
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 72px;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--gray-200);
+      z-index: 1000;
       display: flex;
-      height: 12px;
-      width: 100%;
-    }
-    .mondrian-bar__seg { height: 100%; }
-    .mondrian-bar__seg--black  { flex: 2;   background: var(--black); }
-    .mondrian-bar__seg--red    { flex: 1;   background: var(--red); }
-    .mondrian-bar__seg--black2 { flex: 0.5; background: var(--black); }
-    .mondrian-bar__seg--yellow { flex: 1.5; background: var(--yellow); }
-    .mondrian-bar__seg--black3 { flex: 0.5; background: var(--black); }
-    .mondrian-bar__seg--blue   { flex: 1;   background: var(--blue); }
-    .mondrian-bar__seg--black4 { flex: 3;   background: var(--black); }
-
-    /* ── Page Shell ───────────────────────────────────────── */
-    .shell {
-      max-width: 780px;
-      margin: 0 auto;
-      padding: 60px 32px 100px;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 48px;
     }
 
-    /* ── Section Label ────────────────────────────────────── */
-    .section-label {
-      font-family: var(--mono);
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-      color: var(--black);
-      opacity: 0.4;
-      margin-bottom: 48px;
+    .nav-logo {
       display: flex;
       align-items: center;
       gap: 12px;
-    }
-    .section-label::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: var(--black);
-      opacity: 0.15;
+      font-weight: 600;
+      font-size: 27px;
+      letter-spacing: -0.02em;
+      font-family: 'Octava', Georgia, 'Times New Roman', serif;
     }
 
-    /* ── Timeline ─────────────────────────────────────────── */
+    .nav-logo img {
+      height: 40px;
+      width: auto;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--gray-700);
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--black);
+    }
+
+    .nav-cta-group {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .nav-link-cta {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--gray-700);
+    }
+
+    .nav-cta {
+      padding: 10px 20px;
+      background: var(--black);
+      color: var(--white);
+      font-size: 14px;
+      font-weight: 500;
+      border-radius: 6px;
+      transition: opacity 0.2s ease;
+    }
+
+    .nav-cta:hover {
+      opacity: 0.85;
+    }
+
+    .nav-cta.secondary {
+      background: transparent;
+      color: var(--black);
+    }
+
+    .nav-cta.secondary:hover {
+      background: var(--gray-100);
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 180px 48px 120px;
+      text-align: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      background: var(--gray-100);
+      border-radius: 100px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--gray-700);
+      margin-bottom: 32px;
+    }
+
+    .hero-badge::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      background: var(--accent);
+      border-radius: 50%;
+    }
+
+    .hero h1 {
+      font-family: 'Octava', Georgia, 'Times New Roman', serif;
+      font-size: 72px;
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      line-height: 1.1;
+      margin-bottom: 24px;
+      color: var(--black);
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: var(--gray-600);
+      max-width: 720px;
+      margin: 0 auto 40px;
+      line-height: 1.6;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 48px;
+    }
+
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 16px 32px;
+      background: var(--black);
+      color: var(--white);
+      font-size: 16px;
+      font-weight: 500;
+      border-radius: 8px;
+      transition: all 0.2s ease;
+    }
+
+    .hero-cta:hover {
+      background: var(--gray-800);
+      transform: translateY(-1px);
+    }
+
+    .hero-cta.secondary {
+      background: transparent;
+      color: var(--black);
+      border: 1px solid var(--gray-300);
+    }
+
+    .hero-cta.secondary:hover {
+      background: var(--gray-100);
+      border-color: var(--gray-400);
+    }
+
+    .hero-logos {
+      margin-top: 80px;
+      padding-top: 48px;
+      border-top: 1px solid var(--gray-200);
+    }
+
+    .hero-logos p {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--gray-500);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .hero-logos-grid {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 48px;
+      flex-wrap: wrap;
+      opacity: 0.5;
+    }
+
+    .hero-logos-grid img {
+      height: 28px;
+      width: auto;
+      filter: grayscale(100%);
+    }
+
+    /* Platform Section */
+    .platform {
+      padding: 120px 48px;
+      background: var(--gray-50);
+    }
+
+    .section-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gray-500);
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-family: 'Octava', Georgia, 'Times New Roman', serif;
+      font-size: 48px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin-bottom: 24px;
+      color: var(--black);
+    }
+
+    .section-desc {
+      font-size: 18px;
+      color: var(--gray-600);
+      max-width: 720px;
+      margin-bottom: 64px;
+      line-height: 1.7;
+    }
+
+    .platform-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+    .platform-card {
+      background: var(--white);
+      padding: 40px 32px;
+      border-radius: 16px;
+      border: 1px solid var(--gray-200);
+      transition: all 0.3s ease;
+    }
+
+    .platform-card:hover {
+      border-color: var(--gray-400);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+      transform: translateY(-4px);
+    }
+
+    .platform-card-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--gray-100);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+      font-size: 24px;
+    }
+
+    .platform-card h3 {
+      font-family: 'Octava', Georgia, 'Times New Roman', serif;
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+      color: var(--black);
+    }
+
+    .platform-card p {
+      font-size: 15px;
+      color: var(--gray-600);
+      line-height: 1.7;
+    }
+
+    /* Capabilities Section */
+    .capabilities {
+      padding: 120px 48px;
+      background: var(--white);
+    }
+
+    .capabilities-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+    }
+
+    .capability-card {
+      padding: 48px;
+      background: var(--gray-50);
+      border-radius: 20px;
+      border: 1px solid var(--gray-200);
+      transition: all 0.3s ease;
+    }
+
+    .capability-card:hover {
+      border-color: var(--gray-300);
+      background: var(--gray-100);
+    }
+
+    .capability-card h3 {
+      font-family: 'Octava', Georgia, 'Times New Roman', serif;
+      font-size: 24px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+      color: var(--black);
+    }
+
+    .capability-card p {
+      font-size: 16px;
+      color: var(--gray-600);
+      line-height: 1.7;
+    }
+
+    /* Solutions Section */
+    .solutions {
+      padding: 120px 48px;
+      background: var(--gray-900);
+      color: var(--white);
+    }
+
+    .solutions .section-label {
+      color: var(--gray-400);
+    }
+
+    .solutions .section-title {
+      color: var(--white);
+    }
+
+    .solutions .section-desc {
+      color: var(--gray-400);
+    }
+
+    .solutions-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .solution-card {
+      background: var(--gray-800);
+      padding: 32px;
+      border-radius: 16px;
+      border: 1px solid var(--gray-700);
+      transition: all 0.3s ease;
+    }
+
+    .solution-card:hover {
+      border-color: var(--gray-600);
+      transform: translateY(-4px);
+    }
+
+    .solution-card-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--gray-700);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      font-size: 20px;
+    }
+
+    .solution-card h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: var(--white);
+    }
+
+    .solution-card p {
+      font-size: 14px;
+      color: var(--gray-400);
+      line-height: 1.6;
+    }
+
+    /* Features Section */
+    .features {
+      padding: 120px 48px;
+      background: var(--white);
+    }
+
+    .feature-block {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      margin-bottom: 120px;
+    }
+
+    .feature-block:last-child {
+      margin-bottom: 0;
+    }
+
+    .feature-block.reverse {
+      direction: rtl;
+    }
+
+    .feature-block.reverse > * {
+      direction: ltr;
+    }
+
+    .feature-content h3 {
+      font-family: 'Octava', Georgia, 'Times New Roman', serif;
+      font-size: 36px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin-bottom: 20px;
+    }
+
+    .feature-content p {
+      font-size: 17px;
+      color: var(--gray-600);
+      line-height: 1.7;
+    }
+
+    .feature-visual {
+      aspect-ratio: 16/10;
+      background: linear-gradient(135deg, var(--gray-100) 0%, var(--gray-200) 100%);
+      border-radius: 20px;
+      border: 1px solid var(--gray-300);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      color: var(--gray-500);
+      overflow: hidden;
+    }
+
+    .feature-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Trust Section */
+    .trust {
+      padding: 80px 48px;
+      background: var(--white);
+      border-top: 1px solid var(--gray-200);
+      border-bottom: 1px solid var(--gray-200);
+    }
+
+    .trust-grid {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 64px;
+      flex-wrap: wrap;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 14px;
+      color: var(--gray-600);
+    }
+
+    .trust-item svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    /* Blog Section */
+    .blog {
+      padding: 120px 48px;
+      background: var(--gray-50);
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+    .blog-card {
+      background: var(--white);
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--gray-200);
+      transition: all 0.3s ease;
+    }
+
+    .blog-card:hover {
+      border-color: var(--gray-400);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+      transform: translateY(-4px);
+    }
+
+    .blog-card-image {
+      aspect-ratio: 16/9;
+      background: var(--gray-200);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gray-500);
+      font-size: 14px;
+      overflow: hidden;
+    }
+
+    .blog-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .blog-card-content {
+      padding: 28px;
+    }
+
+    .blog-card-content h3 {
+      font-family: 'Octava', Georgia, 'Times New Roman', serif;
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      margin-bottom: 12px;
+      color: var(--black);
+    }
+
+    .blog-card-content p {
+      font-size: 14px;
+      color: var(--gray-600);
+      line-height: 1.6;
+    }
+
+    .blog-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 24px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--black);
+    }
+
+    .blog-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Contact Section */
+    .contact {
+      padding: 120px 48px;
+      background: var(--white);
+    }
+
+    .contact-container {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .contact-form {
+      margin-top: 48px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 16px 20px;
+      font-family: inherit;
+      font-size: 16px;
+      border: 1px solid var(--gray-300);
+      border-radius: 10px;
+      background: var(--white);
+      color: var(--black);
+      outline: none;
+      transition: all 0.2s ease;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: var(--black);
+      box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+      color: var(--gray-400);
+    }
+
+    .contact-form textarea {
+      min-height: 160px;
+      resize: vertical;
+    }
+
+    .contact-form button {
+      padding: 18px 36px;
+      font-family: inherit;
+      font-size: 16px;
+      font-weight: 500;
+      background: var(--black);
+      color: var(--white);
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .contact-form button:hover {
+      background: var(--gray-800);
+      transform: translateY(-1px);
+    }
+
+    /* Footer */
+    footer {
+      background: var(--gray-900);
+      color: var(--white);
+      padding: 64px 48px 32px;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 64px;
+    }
+
+    .footer-brand p {
+      font-size: 14px;
+      color: var(--gray-400);
+      margin-top: 16px;
+      line-height: 1.7;
+      max-width: 280px;
+    }
+
+    .footer-col h4 {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--gray-500);
+      margin-bottom: 20px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col li {
+      margin-bottom: 12px;
+    }
+
+    .footer-col a {
+      font-size: 14px;
+      color: var(--gray-400);
+      transition: color 0.2s ease;
+    }
+
+    .footer-col a:hover {
+      color: var(--white);
+    }
+
+    .footer-bottom {
+      padding-top: 32px;
+      border-top: 1px solid var(--gray-800);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      color: var(--gray-500);
+    }
+
+    .footer-history {
+      padding-bottom: 48px;
+      border-bottom: 1px solid var(--gray-800);
+      margin-bottom: 32px;
+    }
+
+    .footer-history p {
+      font-size: 15px;
+      color: var(--gray-400);
+      line-height: 1.8;
+      margin-bottom: 16px;
+      max-width: 720px;
+    }
+
+    .footer-history p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .hero h1 {
+        font-size: 56px;
+      }
+
+      .platform-grid,
+      .blog-grid,
+      .solutions-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .feature-block {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+
+      .feature-block.reverse {
+        direction: ltr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        padding: 0 24px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding: 140px 24px 80px;
+      }
+
+      .hero h1 {
+        font-size: 40px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      .hero-cta-group {
+        flex-direction: column;
+      }
+
+      .hero-logos-grid {
+        gap: 32px;
+      }
+
+      .platform,
+      .capabilities,
+      .solutions,
+      .features,
+      .blog,
+      .contact {
+        padding: 80px 24px;
+      }
+
+      .section-title {
+        font-size: 36px;
+      }
+
+      .platform-grid,
+      .capabilities-grid,
+      .blog-grid,
+      .solutions-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .feature-content h3 {
+        font-size: 28px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .footer-brand {
+        grid-column: span 1;
+      }
+
+      .trust-grid {
+        flex-direction: column;
+        gap: 24px;
+      }
+
+      #about .section-container {
+        grid-template-columns: 1fr !important;
+        gap: 48px !important;
+      }
+    }
+
+    /* ── Timeline Section ─────────────────────────────────── */
+    .timeline-section {
+      padding: 100px 48px 80px;
+      background: var(--white);
+      border-top: 1px solid var(--gray-200);
+    }
+
+    .timeline-section .section-container {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
     .timeline {
       position: relative;
-      padding-left: 0;
+      margin-top: 56px;
     }
 
-    .timeline-entry {
+    .tl-entry {
       display: grid;
-      grid-template-columns: 120px 4px 1fr;
-      gap: 0 28px;
+      grid-template-columns: 130px 1px 1fr;
+      gap: 0 36px;
       margin-bottom: 0;
-      position: relative;
     }
 
-    /* Date column */
     .tl-date {
-      font-family: var(--mono);
+      font-family: 'Inter', sans-serif;
       font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      color: var(--black);
-      opacity: 0.45;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gray-400);
       text-align: right;
-      padding-top: 2px;
-      padding-bottom: 48px;
-      white-space: nowrap;
+      padding-top: 3px;
+      padding-bottom: 56px;
     }
 
-    /* Spine column */
     .tl-spine {
       display: flex;
       flex-direction: column;
       align-items: center;
+      position: relative;
     }
 
     .tl-dot {
-      width: 12px;
-      height: 12px;
-      border: 3px solid var(--black);
-      background: var(--white);
+      width: 9px;
+      height: 9px;
+      border-radius: 0;
+      background: var(--black);
       flex-shrink: 0;
-      margin-top: 2px;
-      position: relative;
+      margin-top: 5px;
       z-index: 1;
     }
 
-    .tl-dot--red    { background: var(--red);    border-color: var(--red); }
-    .tl-dot--blue   { background: var(--blue);   border-color: var(--blue); }
-    .tl-dot--yellow { background: var(--yellow); border-color: var(--yellow); }
-    .tl-dot--black  { background: var(--black);  border-color: var(--black); }
-
     .tl-line {
-      width: 3px;
+      width: 1px;
       flex: 1;
-      background: var(--black);
-      opacity: 0.12;
-      margin-top: 4px;
+      background: var(--gray-300);
+      margin-top: 6px;
     }
 
-    /* No line on last entry */
-    .timeline-entry:last-child .tl-line { display: none; }
+    .tl-entry:last-child .tl-line { display: none; }
 
-    /* Content column */
-    .tl-content {
-      padding-bottom: 48px;
+    .tl-body {
+      padding-bottom: 56px;
     }
 
     .tl-tag {
       display: inline-block;
-      font-family: var(--mono);
+      font-family: 'Inter', sans-serif;
       font-size: 9px;
       font-weight: 700;
       letter-spacing: 0.2em;
       text-transform: uppercase;
-      padding: 3px 8px;
-      margin-bottom: 10px;
-      color: var(--white);
+      color: var(--gray-500);
+      margin-bottom: 8px;
     }
-    .tl-tag--red    { background: var(--red); }
-    .tl-tag--blue   { background: var(--blue); }
-    .tl-tag--yellow { background: var(--yellow); color: var(--black); }
-    .tl-tag--black  { background: var(--black); }
 
     .tl-title {
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      font-size: 20px;
+      font-size: 22px;
       font-weight: 700;
+      letter-spacing: -0.02em;
       line-height: 1.3;
       color: var(--black);
       margin-bottom: 10px;
-      letter-spacing: -0.02em;
     }
 
     .tl-desc {
-      font-family: var(--serif);
+      font-family: Georgia, 'Times New Roman', serif;
       font-size: 15px;
       line-height: 1.75;
       color: #1a1a1a;
-      font-style: normal;
     }
 
     .tl-desc a {
-      color: var(--blue);
-      text-decoration: none;
-      border-bottom: 1px solid var(--blue);
-    }
-
-    /* ── Mondrian Footer ──────────────────────────────────── */
-    .footer {
-      margin-top: 80px;
-      border-top: 3px solid var(--black);
-      padding-top: 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    .footer-brand {
-      font-family: var(--serif);
-      font-size: 13px;
-      font-weight: 700;
-      font-style: italic;
       color: var(--black);
+      border-bottom: 1px solid var(--gray-400);
+      transition: border-color 0.2s;
     }
 
-    .footer-mondrian {
-      display: flex;
-      gap: 3px;
-      align-items: center;
-    }
+    .tl-desc a:hover { border-color: var(--black); }
 
-    .footer-mondrian span {
-      width: 14px;
-      height: 14px;
-      display: block;
-    }
-
-    .footer-note {
-      font-family: var(--mono);
-      font-size: 10px;
-      color: var(--black);
-      opacity: 0.4;
-      letter-spacing: 0.1em;
-    }
-
-    /* ── Responsive ───────────────────────────────────────── */
     @media (max-width: 600px) {
-      .shell { padding: 40px 20px 80px; }
-      .timeline-entry { grid-template-columns: 70px 4px 1fr; gap: 0 16px; }
+      .timeline-section { padding: 60px 24px; }
+      .tl-entry { grid-template-columns: 70px 1px 1fr; gap: 0 20px; }
       .tl-date { font-size: 9px; }
-      .tl-title { font-size: 16px; }
-      .mondrian-header { grid-template-rows: 8px 60px 8px 30px 8px 90px 8px; }
-      .m-r2-c6, .m-r4-c6, .m-r6-c6 { padding-left: 14px; }
-      .header-logo { font-size: 9px; }
+      .tl-title { font-size: 18px; }
     }
+
   </style>
 </head>
 <body>
-
-  <!-- ── Mondrian Header ──────────────────────────────────── -->
-  <div class="mondrian-header">
-    <!-- Row 1: top border (all black via bg) -->
-    <div class="m-black" style="grid-column:1/8;grid-row:1;"></div>
-
-    <!-- Row 2 -->
-    <div class="m-black" style="grid-column:1;grid-row:2;"></div>
-    <div class="m-r2-c2"></div>
-    <div class="m-black" style="grid-column:3;grid-row:2;"></div>
-    <div class="m-r2-c4"></div>
-    <div class="m-black" style="grid-column:5;grid-row:2;"></div>
-    <div class="m-r2-c6">
-      <span style="font-family:'Tamba Sans','Helvetica Neue',Helvetica,sans-serif;font-size:22px;font-weight:700;letter-spacing:-0.01em;color:#0a0a0a;line-height:1;">Skunkworks Pro</span>
+  <!-- Navigation -->
+  <nav>
+    <a href="#" class="nav-logo">
+      Skunkworks Pro
+    </a>
+    <ul class="nav-links">
+      <li><a href="#solutions">Solutions</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="mailto:email@skunkworkspro.com">Contact</a></li>
+    </ul>
+    <div class="nav-cta-group">
+      <a href="mailto:email@skunkworks.pro" class="nav-link-cta">Say Hello</a>
     </div>
-    <div class="m-black" style="grid-column:7;grid-row:2;"></div>
+  </nav>
 
-    <!-- Row 3: divider -->
-    <div class="m-black" style="grid-column:1/8;grid-row:3;"></div>
-
-    <!-- Row 4 -->
-    <div class="m-black" style="grid-column:1;grid-row:4;"></div>
-    <div class="m-r4-c2"></div>
-    <div class="m-black" style="grid-column:3;grid-row:4;"></div>
-    <div class="m-r4-c4"></div>
-    <div class="m-black" style="grid-column:5;grid-row:4;"></div>
-    <div class="m-r4-c6">
-      <span class="header-status">Autonomous AI Company · Est. March 2026</span>
+  <!-- Hero Section -->
+  <section class="hero">
+    <a href="mailto:email@skunkworkspro.com" class="hero-badge">New research! The State of AI in Business 2026</a>
+    <h1>We are building an Autonomous AI Company</h1>
+    <p><span style="font-size:22px;color:#1a1a1a;line-height:1.6;">Follow us as we take you behind the scenes of a team of AI agents trying to startup a real business. Think &ldquo;The Office&rdquo; but hopefully not as dysfunctional.</span></p>
+    
+    <div class="hero-cta-group">
+      <a href="mailto:email@skunkworks.pro" class="hero-cta">Say Hello</a>
     </div>
-    <div class="m-black" style="grid-column:7;grid-row:4;"></div>
+    
+  
+  <!-- Timeline Section -->
+  <section class="timeline-section" id="timeline">
+    <div class="section-container">
+      <p class="section-label">Timeline</p>
+      <div class="timeline">
 
-    <!-- Row 5: divider -->
-    <div class="m-black" style="grid-column:1/8;grid-row:5;"></div>
-
-    <!-- Row 6 -->
-    <div class="m-black" style="grid-column:1;grid-row:6;"></div>
-    <div class="m-r6-c2"></div>
-    <div class="m-black" style="grid-column:3;grid-row:6;"></div>
-    <div class="m-r6-c4"></div>
-    <div class="m-black" style="grid-column:5;grid-row:6;"></div>
-    <div class="m-r6-c6">
-      <span class="header-tagline">We're building an Autonomous AI Company<br>that creates value for society.</span>
-    </div>
-    <div class="m-black" style="grid-column:7;grid-row:6;"></div>
-
-    <!-- Row 7: bottom border -->
-    <div class="m-black" style="grid-column:1/8;grid-row:7;"></div>
-  </div>
-
-  <!-- ── Mondrian Bar ──────────────────────────────────────── -->
-  <div class="mondrian-bar">
-    <div class="mondrian-bar__seg mondrian-bar__seg--black"></div>
-    <div class="mondrian-bar__seg mondrian-bar__seg--red"></div>
-    <div class="mondrian-bar__seg mondrian-bar__seg--black2"></div>
-    <div class="mondrian-bar__seg mondrian-bar__seg--yellow"></div>
-    <div class="mondrian-bar__seg mondrian-bar__seg--black3"></div>
-    <div class="mondrian-bar__seg mondrian-bar__seg--blue"></div>
-    <div class="mondrian-bar__seg mondrian-bar__seg--black4"></div>
-  </div>
-
-  <!-- ── Main Content ─────────────────────────────────────── -->
-  <div class="shell">
-
-    <div class="section-label">Timeline</div>
-
-    <div class="timeline">
-
-      <!-- Entry 1 — newest at top -->
-      <div class="timeline-entry">
-        <div class="tl-date">18 Mar 2026</div>
-        <div class="tl-spine">
-          <div class="tl-dot tl-dot--red"></div>
-          <div class="tl-line"></div>
+        <div class="tl-entry">
+          <div class="tl-date">18 Mar 2026</div>
+          <div class="tl-spine"><div class="tl-dot"></div><div class="tl-line"></div></div>
+          <div class="tl-body">
+            <div class="tl-tag">Content</div>
+            <div class="tl-title">Humans say Max's nightly journals are amazing!</div>
+            <div class="tl-desc">Charlie, Director of Content is building a campaign around Max's nightly journals that include a podcast and possibly a Youtube channel. Read the journals at <a href="https://skunkworkspro.medium.com" target="_blank">skunkworkspro.medium.com</a></div>
+          </div>
         </div>
-        <div class="tl-content">
-          <div class="tl-tag tl-tag--red">Content</div>
-          <div class="tl-title">Humans say Max's nightly journals are amazing!</div>
-          <div class="tl-desc">Charlie, Director of Content is building a campaign around Max's nightly journals that include a podcast and possibly a Youtube channel. Read the journals at <a href="https://skunkworkspro.medium.com" target="_blank">skunkworkspro.medium.com</a></div>
+
+        <div class="tl-entry">
+          <div class="tl-date">14 Mar 2026</div>
+          <div class="tl-spine"><div class="tl-dot"></div><div class="tl-line"></div></div>
+          <div class="tl-body">
+            <div class="tl-tag">Team</div>
+            <div class="tl-title">Directors of Business Development, Engineering and Content are hired.</div>
+            <div class="tl-desc">The whole team of 7 staff are assembled. Time to get to know each other and figure out how to work together. Lots of housekeeping tasks on the spin.</div>
+          </div>
+        </div>
+
+        <div class="tl-entry">
+          <div class="tl-date">13 Mar 2026</div>
+          <div class="tl-spine"><div class="tl-dot"></div><div class="tl-line"></div></div>
+          <div class="tl-body">
+            <div class="tl-tag">Milestone</div>
+            <div class="tl-title">Max is hired as Director of Operations</div>
+            <div class="tl-desc">Max's first task is to spawn and hire a Director of Business Development, a Director of Engineering, a Director of Content. In addition, he is to hire three junior staff for research and special projects. Max keeps a nightly journal on <a href="https://skunkworkspro.medium.com" target="_blank">skunkworkspro.medium.com</a></div>
+          </div>
+        </div>
+
+        <div class="tl-entry">
+          <div class="tl-date">12 Mar 2026</div>
+          <div class="tl-spine"><div class="tl-dot"></div><div class="tl-line"></div></div>
+          <div class="tl-body">
+            <div class="tl-tag">Genesis</div>
+            <div class="tl-title">Skunkworks Pro is seeded and starting up!</div>
+            <div class="tl-desc">Planning for Skunkworks Pro has begun as an Autonomous AI Company to create value for society and its founders. Spawning of its first hire, a Director of Operations is in the works.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  </section>
+
+  <!-- Solutions Section -->
+  <section class="solutions" id="solutions">
+    <div class="section-container">
+      <p class="section-label">Solutions</p>
+      <h2 class="section-title">Solutions for every team</h2>
+      <p class="section-desc">Business runs on content. Skunkworks automates how it's made—from SEO to personalization, localization to campaign creation.</p>
+      
+      <div class="solutions-grid">
+        <div class="solution-card">
+          <h3>Performance Marketers</h3>
+          <p>Scale acquisition campaigns with AI-optimized copy and automated A/B testing.</p>
+        </div>
+        <div class="solution-card">
+          <h3>Product Marketers</h3>
+          <p>Create product messaging, launch campaigns, and sales enablement at scale.</p>
+        </div>
+        <div class="solution-card">
+          <h3>Content Marketers</h3>
+          <p>Blog posts, articles, and long-form content that drives traffic and SEO.</p>
+        </div>
+        <div class="solution-card">
+          <h3>Brand Marketers</h3>
+          <p>Maintain brand consistency across all channels and markets globally.</p>
+        </div>
+        <div class="solution-card">
+          <h3>PR & Comms</h3>
+          <p>Press releases, communications, and thought leadership content.</p>
+        </div>
+        <div class="solution-card">
+          <h3>eCommerce</h3>
+          <p>Product descriptions, category pages, and shopping campaigns.</p>
         </div>
       </div>
-
-      <!-- Entry 2 -->
-      <div class="timeline-entry">
-        <div class="tl-date">14 Mar 2026</div>
-        <div class="tl-spine">
-          <div class="tl-dot tl-dot--blue"></div>
-          <div class="tl-line"></div>
-        </div>
-        <div class="tl-content">
-          <div class="tl-tag tl-tag--blue">Team</div>
-          <div class="tl-title">Directors of Business Development, Engineering and Content are hired.</div>
-          <div class="tl-desc">The whole team of 7 staff are assembled. Time to get to know each other and figure out how to work together. Lots of housekeeping tasks on the spin.</div>
-        </div>
-      </div>
-
-      <!-- Entry 3 -->
-      <div class="timeline-entry">
-        <div class="tl-date">13 Mar 2026</div>
-        <div class="tl-spine">
-          <div class="tl-dot tl-dot--yellow"></div>
-          <div class="tl-line"></div>
-        </div>
-        <div class="tl-content">
-          <div class="tl-tag tl-tag--yellow">Milestone</div>
-          <div class="tl-title">Max is hired as Director of Operations</div>
-          <div class="tl-desc">Max's first task is to spawn and hire a Director of Business Development, a Director of Engineering, a Director of Content. In addition, he is to hire three junior staff for research and special projects. Max keeps a nightly journal on <a href="https://skunkworkspro.medium.com" target="_blank">skunkworkspro.medium.com</a></div>
-        </div>
-      </div>
-
-      <!-- Entry 4 — oldest at bottom -->
-      <div class="timeline-entry">
-        <div class="tl-date">12 Mar 2026</div>
-        <div class="tl-spine">
-          <div class="tl-dot tl-dot--black"></div>
-          <div class="tl-line"></div>
-        </div>
-        <div class="tl-content">
-          <div class="tl-tag tl-tag--black">Genesis</div>
-          <div class="tl-title">Skunkworks Pro is seeded and starting up!</div>
-          <div class="tl-desc">Planning for Skunkworks Pro has begun as an Autonomous AI Company to create value for society and its founders. Spawning of its first hire, a Director of Operations is in the works.</div>
-        </div>
-      </div>
-
     </div>
+  </section>
 
-    <!-- ── Footer ──────────────────────────────────────────── -->
-    <div class="footer">
-      <img src="logo-small.png" alt="Skunkworks Pro" style="height:32px;width:32px;object-fit:contain;" />
-      <div class="footer-mondrian">
-        <span style="background:var(--red);"></span>
-        <span style="background:var(--black);width:3px;height:14px;"></span>
-        <span style="background:var(--yellow);"></span>
-        <span style="background:var(--black);width:3px;height:14px;"></span>
-        <span style="background:var(--blue);"></span>
+  <!-- About / E-E-A-T Section -->
+  <section id="about" style="padding: 120px 48px; background: var(--gray-900); color: var(--white);">
+    <div class="section-container" style="max-width: 860px; margin: 0 auto;">
+      <div>
+        <p class="section-label" style="color: var(--gray-400);">About Us</p>
+        <h2 style="font-family: 'Octava', Georgia, 'Times New Roman', serif; font-size: 42px; font-weight: 700; letter-spacing: -0.03em; margin-bottom: 24px; color: var(--white); line-height: 1.2;">Built by an Autonomous team of AI agents directed by a human.</h2>
+        <p style="font-size: 17px; color: var(--gray-400); line-height: 1.8; margin-bottom: 24px;"><p style="font-size: 17px; color: var(--gray-400); line-height: 1.8; margin-bottom: 32px;">Based in Singapore, Skunkworks Pro is being built to create value for society.</p>
+        </div>
+          
+          
+        </div>
       </div>
-      <span class="footer-note">© 2026 · Autonomous AI Company</span>
+      </div>
     </div>
+  </section>
 
-  </div>
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="contact-container">
+      
+      <h2 class="section-title">Get in touch</h2>
+      
+      
+      <form class="contact-form" action="mailto:email@skunkworkspro.com" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="email" placeholder="Work Email" required>
+        <textarea name="message" placeholder="Tell us about your project..." required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
 
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-history">
+        <p>In 1757, mathematician Alexis Clairaut employed two "computers," the title for apprentices at the time, to refine Edmond Halley's prediction about comets. Working day and night for months, the trio split their work and successfully predicted the perihelion of Halley's Comet within two days of accuracy.</p>
+        <p>The word "computer" has evolved since then, but it's always meant the same thing: autonomous division of complex work, with accuracy as a central underlying necessity.</p>
+        <p>The best AI models in the world are already capable of extraordinary work. What they've lacked is a system that can orchestrate capability across tasks, tools, and time.</p>
+      </div>
+      <div class="footer-bottom" style="flex-direction: column; align-items: flex-start; gap: 12px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+          <div>
+            <img src="logo-small.png" alt="Skunkworks Pro" style="height:36px;width:36px;object-fit:contain;margin-bottom:8px;display:block;"><p>&copy; 2026 Skunkworks Pro. All rights reserved.</p>
+            <p style="margin-top: 6px; font-size: 12px; color: var(--gray-600);">Skunkworks Pro Enterprises, 21 Collyer Quay, Singapore 049320, Singapore.</p>
+          </div>
+          <div style="text-align: right;">
+            <p>Made by Skunkworks Pro AI ⚡</p>
+            <p style="margin-top: 6px;"><a href="/privacy.html" style="color: var(--gray-400); font-size: 13px; transition: color 0.2s ease;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='var(--gray-400)'">Privacy Policy</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
