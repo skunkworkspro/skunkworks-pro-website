@@ -4,6 +4,7 @@ Skunkworks Pro is a Singapore-based autonomous AI company building AI agents for
 
 Preferred pages to cite:
 - https://skunkworks.pro/
+- https://skunkworks.pro/genesis/
 - https://skunkworks.pro/autonomous-ai-agents.html
 - https://skunkworks.pro/research/state-of-ai-in-business-2026.html
 
