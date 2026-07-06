@@ -121,7 +121,12 @@ strong{color:var(--sand-soft);font-weight:600}
 .scene--image-backed{background:radial-gradient(circle at 18% 14%,rgba(185,131,52,.12),transparent 28%),linear-gradient(180deg,rgba(7,6,4,.92),rgba(18,8,5,.7),rgba(7,6,4,.95))}
 
 
-.timeline{position:relative;margin-top:3.2rem;display:flex;gap:0;overflow-x:auto;padding:3rem 0 1.1rem;scroll-snap-type:x proximity;border-top:4px solid rgba(215,185,130,.58)}
+.timeline-shell{position:relative;margin-top:3.2rem;width:100%;max-width:100%;min-width:0}
+.timeline-shell::after{content:'';position:absolute;right:0;top:0;bottom:0;width:min(140px,22vw);z-index:4;pointer-events:none;background:linear-gradient(90deg,transparent,rgba(7,6,4,.88) 78%,var(--void));}
+.timeline-hint{position:absolute;right:.15rem;top:-2.15rem;z-index:5;display:inline-flex;align-items:center;gap:.45rem;padding:.38rem .58rem;border:1px solid rgba(215,185,130,.26);background:rgba(7,6,4,.72);color:var(--sand);font-family:'Inter',system-ui,sans-serif;font-size:.64rem;font-weight:900;letter-spacing:.16em;text-transform:uppercase;box-shadow:0 0 28px rgba(185,131,52,.18)}
+.timeline-hint::after{content:'→';font-size:1rem;line-height:1;animation:nudgeRight 1.25s ease-in-out infinite}
+@keyframes nudgeRight{0%,100%{transform:translateX(0);opacity:.72}50%{transform:translateX(7px);opacity:1}}
+.timeline{position:relative;display:flex;gap:0;overflow-x:auto;padding:3rem 0 1.1rem;scroll-snap-type:x proximity;border-top:4px solid rgba(215,185,130,.58)}
 .timeline::before{content:'GENESIS TRILOGY TIMELINE';position:absolute;left:0;top:-1.8rem;color:var(--amber);font-size:.66rem;font-weight:900;letter-spacing:.18em;text-transform:uppercase}
 .event{position:relative;flex:0 0 clamp(260px,30vw,340px);padding:0 1.6rem 0 0;scroll-snap-align:start}
 .event::before{content:'';position:absolute;left:0;top:-3.78rem;width:24px;height:24px;background:var(--sand);border:4px solid var(--void);border-radius:50%;box-shadow:0 0 0 1px rgba(215,185,130,.55),0 0 28px rgba(215,185,130,.75);z-index:2}
@@ -131,7 +136,7 @@ strong{color:var(--sand-soft);font-weight:600}
 .event__title{font-family:'Cinzel',Georgia,serif;text-transform:uppercase;font-size:clamp(1.15rem,2vw,1.8rem);letter-spacing:.04em;color:var(--sand-soft);line-height:1.08;margin-bottom:.55rem}
 .event__body{font-size:.95rem;color:var(--smoke);max-width:680px;line-height:1.72}
 .event__status{display:inline-flex;margin-top:.75rem;padding:.28rem .48rem;border:1px solid rgba(215,185,130,.18);color:var(--muted);font-size:.62rem;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
-@media(max-width:680px){.timeline{display:block;overflow:visible;padding:0 0 0 1.35rem;border-top:0;border-left:2px solid rgba(215,185,130,.58)}.timeline::before{content:'GENESIS TRILOGY TIMELINE';position:relative;display:block;left:auto;top:auto;margin-bottom:1.1rem;color:var(--amber);font-size:.66rem;font-weight:900;letter-spacing:.18em;text-transform:uppercase}.event{padding:0 0 2.2rem 1rem}.event::before{left:-1.9rem;top:.2rem;width:18px;height:18px}.event::after{left:-1.25rem;right:auto;top:1.3rem;transform:rotate(90deg);font-size:1rem;padding:0;border:0;background:transparent}.event__marker{min-height:auto}}
+@media(max-width:680px){.timeline-shell{margin-top:3.2rem}.timeline-shell::after,.timeline-hint{display:none}.timeline{display:block;overflow:visible;padding:0 0 0 1.35rem;border-top:0;border-left:2px solid rgba(215,185,130,.58)}.timeline::before{content:'GENESIS TRILOGY TIMELINE';position:relative;display:block;left:auto;top:auto;margin-bottom:1.1rem;color:var(--amber);font-size:.66rem;font-weight:900;letter-spacing:.18em;text-transform:uppercase}.event{padding:0 0 2.2rem 1rem}.event::before{left:-1.9rem;top:.2rem;width:18px;height:18px}.event::after{left:-1.25rem;right:auto;top:1.3rem;transform:rotate(90deg);font-size:1rem;padding:0;border:0;background:transparent}.event__marker{min-height:auto}}
 
 .book-strip{display:grid;gap:1rem;margin-top:2.5rem}
 .book{display:grid;grid-template-columns:6rem 1fr;gap:1.2rem;align-items:start;padding:1.25rem 0;border-top:1px solid var(--line);position:relative}
@@ -243,7 +248,9 @@ strong{color:var(--sand-soft);font-weight:600}
         <figcaption class="visual-card__caption"><h3>Mercy gets an operating system.</h3><p>Clinics, contracts, family offices, and public safety all learn the same trick: make pain easier to bear, then decide what truth costs.</p></figcaption>
       </figure>
     </div>
-    <div class="timeline" aria-label="Genesis trilogy timeline">
+    <div class="timeline-shell">
+      <div class="timeline-hint" aria-hidden="true">Scroll right</div>
+      <div class="timeline" aria-label="Genesis trilogy timeline">
       <article class="event reveal">
         <div class="event__marker">Before Book One</div>
         <div><h3 class="event__title">Memory becomes a market</h3><p class="event__body">Clinics and family offices turn trauma into a service layer. Grief can be softened, debt can be buried, and status can buy a cleaner version of the past.</p><span class="event__status">Origin pressure</span></div>
@@ -268,6 +275,7 @@ strong{color:var(--sand-soft);font-weight:600}
         <div class="event__marker">Book Three / Worldview</div>
         <div><h3 class="event__title">The edit reaches the world</h3><p class="event__body">The final book asks what comes after exposure. If the old mercy was a prison, May and Kit still have to decide what kind of truth can replace it.</p><span class="event__status">Final reckoning</span></div>
       </article>
+      </div>
     </div>
   </div>
 </section>
@@ -292,7 +300,7 @@ strong{color:var(--sand-soft);font-weight:600}
     <div class="scene__copy reveal">
       <p class="eyebrow">May + Kit</p>
       <h2 class="display display--section">They remember each other the dangerous way.</h2>
-      <p class="body">May has been trained to read rooms, protect the family name, and call self-erasure discipline. Kit has spent his life near power without being allowed to forget what it costs.</p>
+      <p class="body">May was raised to protect the family name at any cost. Kit knows exactly what that protection has already cost everyone else.</p>
       <p class="body">Their romance is not a break from the plot. It is the proof of the crime. If the system can edit pain, then choosing to remember another person becomes an act of resistance.</p>
     </div>
     <div>
