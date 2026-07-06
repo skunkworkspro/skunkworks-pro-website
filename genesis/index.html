@@ -17,7 +17,7 @@
 <meta name="twitter:image" content="https://skunkworks.pro/genesis/assets/genesis-leads-hero-photo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
   --void:#070604;
@@ -49,8 +49,8 @@ a{color:inherit;text-decoration:none}
 img{display:block;max-width:100%}
 strong{color:var(--sand-soft);font-weight:600}
 
-.back-link{position:fixed;top:18px;left:18px;z-index:20;display:inline-flex;align-items:center;gap:.45rem;padding:.68rem .9rem;border:1px solid var(--line);background:rgba(7,6,4,.62);backdrop-filter:blur(16px);color:var(--sand-soft);font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
-.site-nav{position:fixed;top:18px;right:18px;z-index:20;display:none;gap:.9rem;padding:.68rem .9rem;border:1px solid var(--line);background:rgba(7,6,4,.56);backdrop-filter:blur(16px);font-size:.68rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--smoke)}
+.back-link{position:fixed;top:18px;left:18px;z-index:20;display:inline-flex;align-items:center;gap:.45rem;padding:.68rem .9rem;border:1px solid var(--line);background:rgba(7,6,4,.62);backdrop-filter:blur(16px);color:var(--sand-soft);font-family:'Inter',system-ui,sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.site-nav{position:fixed;top:18px;right:18px;z-index:20;display:none;gap:.9rem;padding:.68rem .9rem;border:1px solid var(--line);background:rgba(7,6,4,.56);backdrop-filter:blur(16px);font-family:'Inter',system-ui,sans-serif;font-size:.68rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--smoke)}
 .site-nav a:hover,.back-link:hover{color:var(--sand);border-color:var(--line-strong)}
 @media(min-width:860px){.site-nav{display:flex}}
 
@@ -63,10 +63,10 @@ strong{color:var(--sand-soft);font-weight:600}
 
 .hero{min-height:100svh;position:relative;display:grid;align-items:end;overflow:hidden;background:var(--black)}
 .hero__image{position:absolute;inset:0;z-index:0;overflow:hidden}
-.hero__image img{width:100%;height:100%;object-fit:cover;object-position:68% center;filter:saturate(.82) contrast(1.08) brightness(.74)}
+.hero__image img{width:100%;height:100%;object-fit:cover;object-position:68% center;filter:saturate(1.02) contrast(1.04) brightness(1.02)}
 .hero__image::before{content:'';position:absolute;inset:0;z-index:1;background:
-  linear-gradient(90deg,rgba(7,6,4,.95) 0%,rgba(7,6,4,.72) 33%,rgba(7,6,4,.18) 62%,rgba(7,6,4,.74) 100%),
-  linear-gradient(180deg,rgba(7,6,4,.34) 0%,rgba(7,6,4,.16) 42%,rgba(7,6,4,.94) 100%)}
+  linear-gradient(90deg,rgba(7,6,4,.84) 0%,rgba(7,6,4,.52) 33%,rgba(7,6,4,.08) 62%,rgba(7,6,4,.5) 100%),
+  linear-gradient(180deg,rgba(7,6,4,.18) 0%,rgba(7,6,4,.06) 42%,rgba(7,6,4,.78) 100%)}
 .hero__image::after{content:'';position:absolute;inset:0;z-index:2;background:repeating-linear-gradient(180deg,rgba(255,255,255,.025) 0 1px,transparent 1px 5px);opacity:.26;mix-blend-mode:overlay}
 .hero__content{position:relative;z-index:3;width:min(1180px,calc(100% - 2rem));margin:0 auto;padding:8rem 0 5rem}
 .hero__label{display:flex;align-items:center;gap:.7rem;margin-bottom:1.2rem}
@@ -92,17 +92,24 @@ strong{color:var(--sand-soft);font-weight:600}
 .noir-panel p{font-size:.92rem;color:var(--smoke);line-height:1.75;margin-top:1rem}
 .noir-panel .quote{font-family:'Cinzel',Georgia,serif;color:var(--sand-soft);font-size:clamp(1.35rem,2.4vw,2.2rem);line-height:1.2;text-transform:uppercase;letter-spacing:.03em;margin-top:0}
 
-.world-grid{display:grid;grid-template-columns:1fr;gap:1px;background:rgba(215,185,130,.12);border:1px solid rgba(215,185,130,.12);margin-top:2.2rem}
-@media(min-width:780px){.world-grid{grid-template-columns:repeat(3,1fr)}}
-.world-card{background:rgba(9,7,4,.78);padding:1.35rem;min-height:210px;display:flex;flex-direction:column;justify-content:space-between}
-.world-card__top{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:2rem;color:var(--amber);font-size:.68rem;font-weight:900;letter-spacing:.18em;text-transform:uppercase}
-.world-card h3{font-family:'Cinzel',Georgia,serif;text-transform:uppercase;letter-spacing:.05em;font-size:1.45rem;color:var(--sand-soft);margin-bottom:.75rem}
-.world-card p{font-size:.88rem;color:var(--smoke);line-height:1.7}
+.world-map{position:relative;margin-top:2.6rem;min-height:clamp(560px,72vw,760px);overflow:hidden;border:0;background:transparent;box-shadow:none}
+.world-map img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(1.15) contrast(1.04) brightness(1.05);-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 5%,#000 95%,transparent 100%),linear-gradient(180deg,transparent 0%,#000 5%,#000 94%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent 0%,#000 5%,#000 95%,transparent 100%),linear-gradient(180deg,transparent 0%,#000 5%,#000 94%,transparent 100%);mask-composite:intersect}
+.world-map::before{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(7,6,4,.68),rgba(7,6,4,.08) 50%,rgba(7,6,4,.56)),linear-gradient(180deg,rgba(7,6,4,.08),rgba(7,6,4,.64));pointer-events:none}
+.world-map::after{content:'';position:absolute;left:7%;right:7%;top:50%;z-index:2;height:1px;background:linear-gradient(90deg,transparent,var(--sand),rgba(215,185,130,.2),var(--blood),transparent);box-shadow:0 0 28px rgba(215,185,130,.35)}
+.world-pin{position:absolute;z-index:3;width:min(340px,calc(100% - 2rem));padding:1rem 1.05rem;background:rgba(7,6,4,.68);backdrop-filter:blur(14px);border-left:2px solid var(--amber);box-shadow:0 20px 60px rgba(0,0,0,.38)}
+.world-pin:nth-of-type(1){left:clamp(1rem,5vw,4rem);top:clamp(1.4rem,8vw,5rem)}
+.world-pin:nth-of-type(2){right:clamp(1rem,5vw,4rem);top:42%}
+.world-pin:nth-of-type(3){left:clamp(1rem,8vw,7rem);bottom:clamp(1.4rem,6vw,4rem)}
+.world-pin__top{display:flex;align-items:center;gap:.75rem;color:var(--amber);font-size:.66rem;font-weight:900;letter-spacing:.16em;text-transform:uppercase;margin-bottom:.55rem}
+.world-pin__top span:first-child{font-family:'Cinzel',Georgia,serif;font-size:1.35rem;color:var(--sand-soft)}
+.world-pin h3{font-family:'Cinzel',Georgia,serif;text-transform:uppercase;letter-spacing:.05em;font-size:clamp(1.45rem,2.5vw,2.25rem);line-height:1;color:var(--sand-soft);margin-bottom:.55rem}
+.world-pin p{font-size:.9rem;color:var(--smoke);line-height:1.62}
+@media(max-width:720px){.world-map{min-height:auto;padding:18rem 1rem 1rem}.world-pin{position:relative;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;width:100%;margin-top:.8rem}.world-map img{height:18rem;bottom:auto}.world-map::after{display:none}}
 
 .visual-band{margin-top:2.4rem;display:grid;gap:1rem}
-.visual-card{position:relative;min-height:clamp(320px,48vw,620px);overflow:hidden;border:1px solid rgba(215,185,130,.18);background:#080604;box-shadow:0 34px 100px rgba(0,0,0,.42)}
-.visual-card img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;filter:saturate(.9) contrast(1.08) brightness(.82)}
-.visual-card::before{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(7,6,4,.78),rgba(7,6,4,.2) 52%,rgba(7,6,4,.68)),linear-gradient(180deg,rgba(7,6,4,.08),rgba(7,6,4,.78));pointer-events:none}
+.visual-card{position:relative;min-height:clamp(320px,48vw,620px);overflow:hidden;border:0;background:transparent;box-shadow:none}
+.visual-card img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;filter:saturate(1.12) contrast(1.04) brightness(1.12);-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 6%,#000 94%,transparent 100%),linear-gradient(180deg,transparent 0%,#000 6%,#000 92%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent 0%,#000 6%,#000 94%,transparent 100%),linear-gradient(180deg,transparent 0%,#000 6%,#000 92%,transparent 100%);mask-composite:intersect}
+.visual-card::before{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(7,6,4,.38),rgba(7,6,4,.04) 52%,rgba(7,6,4,.34)),linear-gradient(180deg,rgba(7,6,4,.02),rgba(7,6,4,.42));pointer-events:none}
 .visual-card::after{content:'';position:absolute;inset:0;z-index:2;background:repeating-linear-gradient(180deg,rgba(255,255,255,.025) 0 1px,transparent 1px 6px);mix-blend-mode:overlay;opacity:.28;pointer-events:none}
 .visual-card__caption{position:absolute;z-index:3;left:clamp(1rem,3vw,2rem);bottom:clamp(1rem,3vw,2rem);max-width:520px;border-left:1px solid rgba(215,185,130,.45);padding-left:1rem}
 .visual-card__caption h3{font-family:'Cinzel',Georgia,serif;text-transform:uppercase;letter-spacing:.05em;font-size:clamp(1.2rem,2.2vw,2rem);line-height:1.05;color:var(--sand-soft);margin-bottom:.45rem}
@@ -114,40 +121,33 @@ strong{color:var(--sand-soft);font-weight:600}
 .scene--image-backed{background:radial-gradient(circle at 18% 14%,rgba(185,131,52,.12),transparent 28%),linear-gradient(180deg,rgba(7,6,4,.92),rgba(18,8,5,.7),rgba(7,6,4,.95))}
 
 
-.timeline{position:relative;margin-top:3rem;border-left:1px solid var(--line-strong)}
-.timeline::before{content:'';position:absolute;left:-1px;top:0;width:1px;height:100%;background:linear-gradient(180deg,var(--blood),var(--amber),transparent)}
-.event{display:grid;grid-template-columns:1fr;gap:1rem;padding:0 0 2.2rem 1.3rem;position:relative}
-.event::before{content:'';position:absolute;left:-6px;top:.25rem;width:11px;height:11px;background:var(--sand);box-shadow:0 0 22px rgba(215,185,130,.55);transform:rotate(45deg)}
-.event__marker{font-size:.68rem;font-weight:900;letter-spacing:.2em;text-transform:uppercase;color:var(--amber)}
+.timeline{position:relative;margin-top:3.2rem;display:flex;gap:0;overflow-x:auto;padding:3rem 0 1.1rem;scroll-snap-type:x proximity;border-top:4px solid rgba(215,185,130,.58)}
+.timeline::before{content:'GENESIS TRILOGY TIMELINE';position:absolute;left:0;top:-1.8rem;color:var(--amber);font-size:.66rem;font-weight:900;letter-spacing:.18em;text-transform:uppercase}
+.event{position:relative;flex:0 0 clamp(260px,30vw,340px);padding:0 1.6rem 0 0;scroll-snap-align:start}
+.event::before{content:'';position:absolute;left:0;top:-3.78rem;width:24px;height:24px;background:var(--sand);border:4px solid var(--void);border-radius:50%;box-shadow:0 0 0 1px rgba(215,185,130,.55),0 0 28px rgba(215,185,130,.75);z-index:2}
+.event::after{content:'→';position:absolute;right:1.15rem;top:-3.95rem;color:var(--amber);font-size:1.25rem;line-height:1;border:1px solid rgba(215,185,130,.34);border-radius:999px;padding:.08rem .42rem;background:rgba(7,6,4,.78)}
+.event:last-child::after{display:none}
+.event__marker{font-size:.68rem;font-weight:900;letter-spacing:.2em;text-transform:uppercase;color:var(--amber);margin-bottom:.55rem;min-height:2.25rem}
 .event__title{font-family:'Cinzel',Georgia,serif;text-transform:uppercase;font-size:clamp(1.15rem,2vw,1.8rem);letter-spacing:.04em;color:var(--sand-soft);line-height:1.08;margin-bottom:.55rem}
 .event__body{font-size:.95rem;color:var(--smoke);max-width:680px;line-height:1.72}
 .event__status{display:inline-flex;margin-top:.75rem;padding:.28rem .48rem;border:1px solid rgba(215,185,130,.18);color:var(--muted);font-size:.62rem;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
-@media(min-width:820px){
-  .timeline{display:grid;grid-template-columns:repeat(6,minmax(240px,1fr));gap:0;overflow-x:auto;padding:2.6rem 0 .75rem;border-left:0;border-top:1px solid var(--line-strong);scroll-snap-type:x proximity}
-  .timeline::before{left:0;top:-1px;width:100%;height:1px;background:linear-gradient(90deg,var(--blood),var(--amber),transparent)}
-  .event{display:block;min-width:240px;padding:0 1.4rem 0 0;scroll-snap-align:start}
-  .event::before{left:0;top:-3.05rem}
-  .event__marker{min-height:2.4rem;margin-bottom:1rem}
-  .event__body{max-width:300px}
-}
+@media(max-width:680px){.timeline{display:block;overflow:visible;padding:0 0 0 1.35rem;border-top:0;border-left:2px solid rgba(215,185,130,.58)}.timeline::before{content:'GENESIS TRILOGY TIMELINE';position:relative;display:block;left:auto;top:auto;margin-bottom:1.1rem;color:var(--amber);font-size:.66rem;font-weight:900;letter-spacing:.18em;text-transform:uppercase}.event{padding:0 0 2.2rem 1rem}.event::before{left:-1.9rem;top:.2rem;width:18px;height:18px}.event::after{left:-1.25rem;right:auto;top:1.3rem;transform:rotate(90deg);font-size:1rem;padding:0;border:0;background:transparent}.event__marker{min-height:auto}}
 
-.book-strip{display:grid;grid-template-columns:1fr;gap:1rem;margin-top:2.5rem}
-@media(min-width:920px){.book-strip{grid-template-columns:repeat(3,1fr)}}
-.book{min-height:360px;padding:1.35rem;border:1px solid var(--line);background:
-  linear-gradient(180deg,rgba(215,185,130,.06),rgba(0,0,0,.08)),
-  radial-gradient(circle at 50% 12%,rgba(185,131,52,.18),transparent 35%),
-  rgba(10,8,5,.68);display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
-.book::after{content:'';position:absolute;inset:auto -20% -35% -20%;height:55%;background:radial-gradient(ellipse at center,rgba(141,47,34,.18),transparent 70%)}
+.book-strip{display:grid;gap:1rem;margin-top:2.5rem}
+.book{display:grid;grid-template-columns:6rem 1fr;gap:1.2rem;align-items:start;padding:1.25rem 0;border-top:1px solid var(--line);position:relative}
+.book:last-child{border-bottom:1px solid rgba(215,185,130,.14)}
+.book::before{content:'';position:absolute;left:6rem;top:1.2rem;bottom:1.2rem;width:1px;background:linear-gradient(180deg,var(--amber),transparent)}
 .book__number{font-size:.64rem;font-weight:900;letter-spacing:.2em;text-transform:uppercase;color:var(--amber)}
-.book h3{font-family:'Cinzel',Georgia,serif;font-size:clamp(1.6rem,3vw,2.65rem);line-height:1;text-transform:uppercase;letter-spacing:.04em;color:var(--sand-soft);margin:1.2rem 0 .7rem;position:relative;z-index:1}
-.book p{font-size:.9rem;color:var(--smoke);line-height:1.68;position:relative;z-index:1}
-.book__tag{margin-top:1.2rem;color:var(--muted);font-size:.65rem;font-weight:900;letter-spacing:.18em;text-transform:uppercase;position:relative;z-index:1}
+.book h3{font-family:'Cinzel',Georgia,serif;font-size:clamp(1.55rem,3vw,2.65rem);line-height:1;text-transform:uppercase;letter-spacing:.04em;color:var(--sand-soft);margin:0 0 .7rem;position:relative;z-index:1}
+.book p{font-size:.94rem;color:var(--smoke);line-height:1.7;position:relative;z-index:1;max-width:840px}
+.book__tag{display:inline-flex;margin-top:1rem;color:var(--muted);font-size:.65rem;font-weight:900;letter-spacing:.18em;text-transform:uppercase;position:relative;z-index:1}
+@media(max-width:620px){.book{grid-template-columns:1fr}.book::before{display:none}}
 
-.matrix{display:grid;grid-template-columns:1fr;gap:1px;background:rgba(215,185,130,.11);border:1px solid rgba(215,185,130,.11);margin-top:2.4rem}
-@media(min-width:760px){.matrix{grid-template-columns:repeat(2,1fr)}}
-.matrix__item{background:rgba(8,7,5,.84);padding:1.2rem}
-.matrix__item h3{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--amber);margin-bottom:.65rem}
-.matrix__item p{font-size:.92rem;color:var(--smoke);line-height:1.65}
+.matrix{display:grid;gap:0;margin-top:2.4rem;border-top:1px solid rgba(215,185,130,.18)}
+.matrix__item{display:grid;grid-template-columns:minmax(7rem,.28fr) 1fr;gap:1rem;padding:1rem 0;border-bottom:1px solid rgba(215,185,130,.14);background:linear-gradient(90deg,rgba(215,185,130,.04),transparent 38%)}
+.matrix__item h3{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--amber);margin:0}
+.matrix__item p{font-size:.92rem;color:var(--smoke);line-height:1.65;max-width:760px}
+@media(max-width:560px){.matrix__item{grid-template-columns:1fr;gap:.35rem}}
 
 .cta{min-height:82svh;text-align:center;background:radial-gradient(circle at 50% 10%,rgba(185,131,52,.16),transparent 35%),linear-gradient(180deg,var(--void),#120805 70%,var(--void));display:grid;place-items:center;padding:7rem 1rem;border-top:1px solid rgba(215,185,130,.08)}
 .cta__inner{max-width:850px;margin:0 auto}.cta .display{margin:.85rem auto 1.2rem}.cta .body{margin:0 auto 2rem}
@@ -172,8 +172,8 @@ strong{color:var(--sand-soft);font-weight:600}
   <div class="hero__image" aria-hidden="true"><img src="assets/genesis-leads-hero-photo.png" alt=""></div>
   <div class="hero__content">
     <div class="hero__label reveal"><span class="kicker">Genesis / cyber-noir romantasy</span></div>
-    <h1 class="display display--hero reveal">She can edit grief.<br>He remembers what the city buried.</h1>
-    <p class="hero__lede reveal">A trilogy of polished towers, humid safehouses, dangerous inheritance, and the one kind of love no system can make painless.</p>
+    <h1 class="display display--hero reveal">Her family stole the truth.<br>His mother was the first thing they erased.</h1>
+    <p class="hero__lede reveal">In a near-future Singapore and Bangkok, grief can be edited, truth can be managed, and power wears the language of mercy. Genesis is a dark, addictive trilogy about memory, class, desire, and the cost of choosing what is real.</p>
     <div class="hero__actions reveal">
       <a class="btn btn--primary" href="#timeline">Trace the trilogy</a>
       <a class="btn" href="#world">Enter the cities</a>
@@ -191,9 +191,9 @@ strong{color:var(--sand-soft);font-weight:600}
   <div class="scene__inner">
     <div class="scene__copy reveal">
       <p class="eyebrow">The premise</p>
-      <h2 class="display display--section">A beautiful lie is still a prison.</h2>
-      <p class="body">Genesis begins as an intimate house mystery and widens into a fight over memory itself. In this future, power no longer needs to arrive as brute force. It arrives as care. As relief. As mercy.</p>
-      <p class="body">That is what makes it terrifying. May wants the truth. Kit remembers too much. The city wants both of them easier to manage.</p>
+      <h2 class="display display--section">The future learned to sell relief.</h2>
+      <p class="body">Genesis starts inside a private house where family power hides behind taste, money, and manners. The technology is intimate: grief can be softened, shame can be managed, and inconvenient memory can be cleaned until obedience feels like healing.</p>
+      <p class="body">May has inherited a life built on careful omissions. Kit has survived by remembering what everyone else was paid to forget. The danger is not that the city lies. It is that the lie works.</p>
     </div>
     <aside class="noir-panel reveal" aria-label="Genesis core hook">
       <p class="quote">The system does not erase people. It improves them until nobody can find the original.</p>
@@ -206,20 +206,27 @@ strong{color:var(--sand-soft);font-weight:600}
   <div class="scene__inner">
     <div class="scene__copy reveal">
       <p class="eyebrow">The world</p>
-      <h2 class="display display--section">Two cities. One machinery of mercy.</h2>
-      <p class="body">The palette stays closer to Dune — black, sand, amber, rust — but the behaviour is cyberpunk: hard cuts, surveillance lines, warning labels, and a city that feels alive around the reader.</p>
+      <h2 class="display display--section">Singapore writes the rules. Bangkok finds the cracks.</h2>
+      <p class="body">The surface is luxury: towers, clinics, family offices, rooms that know how to keep secrets. Underneath, the same machinery runs through repair markets, safehouses, debt ledgers, and memory work sold as care.</p>
     </div>
-    <div class="world-grid">
-      <article class="world-card reveal"><div><div class="world-card__top"><span>01</span><span>Controlled surface</span></div><h3>Singapore</h3><p>Luxury towers, silent corridors, family power, invisible labour, and systems designed to make obedience feel like good taste.</p></div></article>
-      <article class="world-card reveal"><div><div class="world-card__top"><span>02</span><span>Improvised resistance</span></div><h3>Bangkok</h3><p>Rooftop markets, repair warrens, transit arteries, humid safehouses, old gods, new machines, and people who still know how to bend a system.</p></div></article>
-      <article class="world-card reveal"><div><div class="world-card__top"><span>03</span><span>The pressure</span></div><h3>Memory</h3><p>Not just technology. Governance, inheritance, grief management, class control, and the most intimate form of power imaginable.</p></div></article>
-    </div>
-    <div class="visual-band reveal">
-      <figure class="visual-card">
-        <img src="assets/genesis-environment-photo.png" alt="Near-future Singapore and Bangkok fused into a dark amber cyber-noir cityscape.">
-        <figcaption class="visual-card__caption"><h3>The city behaves like mercy.</h3><p>Luxury, transit, clinics, markets, and surveillance all running on the same hidden machinery.</p></figcaption>
-      </figure>
-    </div>
+    <figure class="world-map reveal" aria-label="Genesis world map">
+      <img src="assets/genesis-environment-photo.png" alt="Near-future Singapore and Bangkok fused into a neon cyber-noir megacity.">
+      <figcaption class="world-pin">
+        <div class="world-pin__top"><span>01</span><span>Controlled surface</span></div>
+        <h3>Singapore</h3>
+        <p>Family offices, private clinics, sealed corridors, and luxury towers where obedience is dressed up as taste.</p>
+      </figcaption>
+      <figcaption class="world-pin">
+        <div class="world-pin__top"><span>02</span><span>Improvised resistance</span></div>
+        <h3>Bangkok</h3>
+        <p>Repair markets, rooftop routes, humid safehouses, old gods, new machines, and people who still know how to bend a system.</p>
+      </figcaption>
+      <figcaption class="world-pin">
+        <div class="world-pin__top"><span>03</span><span>The pressure</span></div>
+        <h3>Memory</h3>
+        <p>Not just technology. Governance, inheritance, grief management, class control, and the most intimate form of power imaginable.</p>
+      </figcaption>
+    </figure>
   </div>
 </section>
 
@@ -227,39 +234,39 @@ strong{color:var(--sand-soft);font-weight:600}
   <div class="scene__inner">
     <div class="scene__copy reveal">
       <p class="eyebrow">Spoiler-safe trilogy timeline</p>
-      <h2 class="display display--section">The story gets bigger. The wound gets closer.</h2>
-      <p class="body">This timeline is designed to create anticipation without giving away the plot: each step names the pressure shift, not the secret underneath it.</p>
+      <h2 class="display display--section">The case file becomes a city map.</h2>
+      <p class="body">The trilogy moves from a sealed house to a city built on edited pain, then to the question nobody in power wants asked: who owns a person after their memories have been improved?</p>
     </div>
     <div class="visual-band reveal">
       <figure class="visual-card">
-        <img src="assets/genesis-environment-photo.png" alt="A polished memory clinic rendered as ominous diagnostic architecture in amber cyber-noir light.">
-        <figcaption class="visual-card__caption"><h3>Care becomes infrastructure.</h3><p>The horror is not cruelty. It is comfort made administrative, clinical, and impossible to refuse.</p></figcaption>
+        <img src="assets/genesis-memory-photo.png" alt="May overlooking a neon megacity through rain-streaked glass as memory infrastructure spreads below.">
+        <figcaption class="visual-card__caption"><h3>Mercy gets an operating system.</h3><p>Clinics, contracts, family offices, and public safety all learn the same trick: make pain easier to bear, then decide what truth costs.</p></figcaption>
       </figure>
     </div>
     <div class="timeline" aria-label="Genesis trilogy timeline">
       <article class="event reveal">
         <div class="event__marker">Before Book One</div>
-        <div><h3 class="event__title">The age of edited pain</h3><p class="event__body">The world learns to treat memory as infrastructure. Grief, debt, status, and survival become things powerful people can smooth, price, or quietly remove.</p><span class="event__status">Origin pressure</span></div>
+        <div><h3 class="event__title">Memory becomes a market</h3><p class="event__body">Clinics and family offices turn trauma into a service layer. Grief can be softened, debt can be buried, and status can buy a cleaner version of the past.</p><span class="event__status">Origin pressure</span></div>
       </article>
       <article class="event reveal">
         <div class="event__marker">Book One / House</div>
-        <div><h3 class="event__title">May crosses the threshold</h3><p class="event__body">A private house draws May into its orbit. The danger is intimate first: inheritance, loyalty, family myth, and Kit — the person who makes the polished lie harder to believe.</p><span class="event__status">Closed-room ignition</span></div>
+        <div><h3 class="event__title">May enters the house</h3><p class="event__body">A sealed family estate pulls May into rooms built to preserve wealth and erase consequence. Kit is the first person there who treats memory like evidence, not damage.</p><span class="event__status">Closed-room ignition</span></div>
       </article>
       <article class="event reveal">
         <div class="event__marker">Book One / Turn</div>
-        <div><h3 class="event__title">The house points beyond itself</h3><p class="event__body">What looked like one family’s secret starts to resemble a system. May and Kit’s connection stops being just personal risk and becomes evidence of something larger.</p><span class="event__status">First expansion</span></div>
+        <div><h3 class="event__title">The house is a prototype</h3><p class="event__body">The family secret is not isolated. The house has been testing a model the city is ready to scale, and May and Kit are standing too close to the proof.</p><span class="event__status">First expansion</span></div>
       </article>
       <article class="event reveal">
         <div class="event__marker">Book Two / City</div>
-        <div><h3 class="event__title">The city of cruel mercies opens</h3><p class="event__body">The story moves from private rooms into public machinery: surveillance, clinics, debt, synthetic comfort, old bargains, and the question of who gets protected by being controlled.</p><span class="event__status">City-scale escalation</span></div>
+        <div><h3 class="event__title">The city starts answering back</h3><p class="event__body">Book Two moves into clinics, debt systems, surveillance, synthetic comfort, and Bangkok backchannels. Protection starts to look a lot like ownership.</p><span class="event__status">City-scale escalation</span></div>
       </article>
       <article class="event reveal">
         <div class="event__marker">Book Two / Fracture</div>
-        <div><h3 class="event__title">Love becomes a political problem</h3><p class="event__body">May and Kit want each other, but wanting is not simple when survival asks for different compromises. The romance sharpens because the world finally understands it as leverage.</p><span class="event__status">No easy side</span></div>
+        <div><h3 class="event__title">Their love becomes evidence</h3><p class="event__body">May and Kit are no longer just a private risk. Their bond proves something the system cannot tolerate: some memories survive because another person refuses to let them disappear.</p><span class="event__status">No easy side</span></div>
       </article>
       <article class="event reveal">
         <div class="event__marker">Book Three / Worldview</div>
-        <div><h3 class="event__title">A new reality tries to inherit the old one</h3><p class="event__body">Collapse is not the ending. The final book asks what replaces a beautiful prison once people are brave enough to break it — and what love costs when it has to choose a world.</p><span class="event__status">Final reckoning</span></div>
+        <div><h3 class="event__title">The edit reaches the world</h3><p class="event__body">The final book asks what comes after exposure. If the old mercy was a prison, May and Kit still have to decide what kind of truth can replace it.</p><span class="event__status">Final reckoning</span></div>
       </article>
     </div>
   </div>
@@ -269,13 +276,13 @@ strong{color:var(--sand-soft);font-weight:600}
   <div class="scene__inner">
     <div class="scene__copy reveal">
       <p class="eyebrow">The trilogy shape</p>
-      <h2 class="display display--section">House. City. World.</h2>
-      <p class="body">Each book widens the frame without losing the emotional engine: May and Kit trying to stay fully seen in a world that profits from making truth optional.</p>
+      <h2 class="display display--section">Three books. One widening crime.</h2>
+      <p class="body">Each book widens the investigation without letting go of the core romance: May and Kit trying to stay real in a world where truth has become an expensive preference.</p>
     </div>
     <div class="book-strip">
-      <article class="book reveal"><div><p class="book__number">Book I</p><h3>The House Book</h3><p>A sealed world of inheritance, family power, and beautiful rooms where violence has learned to speak softly.</p></div><p class="book__tag">Intimacy under control</p></article>
-      <article class="book reveal"><div><p class="book__number">Book II</p><h3>The City of Cruel Mercies</h3><p>The private mystery spills into a city built on compassion with a blade hidden inside it.</p></div><p class="book__tag">Desire under surveillance</p></article>
-      <article class="book reveal"><div><p class="book__number">Book III</p><h3>The World We Kept</h3><p>The final reckoning is not whether the old order falls. It is what kind of truth survives after it does.</p></div><p class="book__tag">Love after the system</p></article>
+      <article class="book reveal"><p class="book__number">Book I</p><div><h3>The House That Remembers</h3><p>May enters a family estate where every room has been arranged to make violence look like inheritance. Kit knows the house too well, and what he remembers turns their attraction into a liability. The mystery begins as a private wound, then opens onto the first proof that memory itself is being managed.</p><p class="book__tag">Closed-room romance / inheritance horror</p></div></article>
+      <article class="book reveal"><p class="book__number">Book II</p><div><h3>The City of Cruel Mercies</h3><p>The secret leaves the house and enters the city. Clinics, creditors, family offices, and street-level fixers all touch the same hidden system: mercy sold as control. May and Kit follow the trail through Singapore power and Bangkok improvisation while their relationship becomes something the city can use against them.</p><p class="book__tag">City thriller / desire under surveillance</p></div></article>
+      <article class="book reveal"><p class="book__number">Book III</p><div><h3>The World We Kept</h3><p>By the final book, exposure is not enough. The old order is already preparing a cleaner story about itself, and the people it edited are still carrying the damage. May and Kit have to decide what survives: revenge, repair, or a version of love honest enough to build from.</p><p class="book__tag">Aftermath / truth after the system</p></div></article>
     </div>
   </div>
 </section>
@@ -284,19 +291,19 @@ strong{color:var(--sand-soft);font-weight:600}
   <div class="scene__inner">
     <div class="scene__copy reveal">
       <p class="eyebrow">May + Kit</p>
-      <h2 class="display display--section">They are not safe for each other. That is why they matter.</h2>
-      <p class="body">May is composed, intelligent, and trained by inheritance to survive beautifully. Kit is restrained, observant, and no longer willing to remain useful only at the edges of someone else’s life.</p>
-      <p class="body">Their romance is not escape from the plot. It is the test case. If memory can be edited and grief can be softened, then being fully seen becomes the most dangerous intimacy left.</p>
+      <h2 class="display display--section">They remember each other the dangerous way.</h2>
+      <p class="body">May has been trained to read rooms, protect the family name, and call self-erasure discipline. Kit has spent his life near power without being allowed to forget what it costs.</p>
+      <p class="body">Their romance is not a break from the plot. It is the proof of the crime. If the system can edit pain, then choosing to remember another person becomes an act of resistance.</p>
     </div>
     <div>
       <div class="portrait-grid reveal">
         <figure class="visual-card">
-          <img src="assets/genesis-may-photo.png" alt="May and Kit framed in a rain-streaked luxury tower with the city behind them.">
-          <figcaption class="visual-card__caption"><h3>The house setup</h3><p>Polished danger: inheritance, glass, silence, and the first pressure of being seen.</p></figcaption>
+          <img src="assets/genesis-may-photo.png" alt="May in a rain-streaked luxury tower above a cyber-noir megacity.">
+          <figcaption class="visual-card__caption"><h3>May</h3><p>Composed, cornered, and starting to understand that the life built for her depends on what she agrees not to see.</p></figcaption>
         </figure>
         <figure class="visual-card">
-          <img src="assets/genesis-kit-photo.png" alt="May and Kit reframed in a humid Bangkok safehouse atmosphere with neon haze.">
-          <figcaption class="visual-card__caption"><h3>The city setup</h3><p>Improvised resistance: heat, signal, borrowed shelter, and desire under surveillance.</p></figcaption>
+          <img src="assets/genesis-kit-photo.png" alt="Kit in a dark cyber-noir high-rise with neon city light behind him.">
+          <figcaption class="visual-card__caption"><h3>Kit</h3><p>Restrained, observant, and carrying the kind of memory that makes him useful to power until he stops obeying it.</p></figcaption>
         </figure>
       </div>
       <div class="matrix reveal">
@@ -312,13 +319,13 @@ strong{color:var(--sand-soft);font-weight:600}
 <section class="cta" id="closing">
   <div class="cta__inner reveal">
     <p class="eyebrow">Coming soon</p>
-    <h2 class="display display--section">Leave an address the city can find.</h2>
-    <p class="body">Genesis is a cyber-noir romantasy trilogy about dangerous love, living memory, and the brutal intimacy of staying awake inside a system built to soften everything that hurts.</p>
+    <h2 class="display display--section">The city is already looking for you.</h2>
+    <p class="body">Genesis is a cyber-noir romantasy trilogy about dangerous love, bought mercy, and the cost of staying awake when every system around you is designed to make the truth hurt less.</p>
     <a class="btn btn--primary" href="#top">Return to the signal</a>
   </div>
 </section>
 
-<footer class="footer">Genesis — a premium cyber-noir romantasy story world.</footer>
+<footer class="footer">Genesis — cyber-noir romantasy / memory, class, desire.</footer>
 
 <script>
 (function(){
