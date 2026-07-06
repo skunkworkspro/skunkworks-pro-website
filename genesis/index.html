@@ -56,7 +56,7 @@ strong{color:var(--sand-soft);font-weight:600}
 
 .kicker,.eyebrow{font-size:.72rem;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:var(--amber)}
 .display{font-family:'Cinzel',Georgia,serif;font-weight:500;letter-spacing:.03em;line-height:.94;text-transform:uppercase;color:var(--sand-soft)}
-.display--hero{font-size:clamp(3.2rem,9vw,9.6rem);max-width:950px;text-shadow:0 0 46px rgba(185,131,52,.18)}
+.display--hero{font-size:clamp(3.2rem,8vw,8.4rem);max-width:min(760px,56vw);text-shadow:0 0 46px rgba(185,131,52,.18)}
 .display--section{font-size:clamp(2rem,5vw,5.3rem);max-width:980px}
 .body{font-size:clamp(1rem,1.25vw,1.16rem);color:var(--smoke);max-width:42rem;line-height:1.75}
 .micro{font-size:.78rem;letter-spacing:.11em;text-transform:uppercase;color:var(--muted)}
@@ -71,13 +71,13 @@ strong{color:var(--sand-soft);font-weight:600}
 .hero__content{position:relative;z-index:3;width:min(1180px,calc(100% - 2rem));margin:0 auto;padding:8rem 0 5rem}
 .hero__label{display:flex;align-items:center;gap:.7rem;margin-bottom:1.2rem}
 .hero__label::before{content:'///';color:var(--blood);font-weight:900;letter-spacing:.18em}
-.hero__lede{margin-top:1.35rem;font-size:clamp(1.08rem,1.8vw,1.55rem);max-width:760px;color:#e9d7b2;line-height:1.55;text-shadow:0 8px 30px rgba(0,0,0,.6)}
+.hero__lede{margin-top:1.35rem;font-size:clamp(1.08rem,1.8vw,1.55rem);max-width:min(680px,52vw);color:#e9d7b2;line-height:1.55;text-shadow:0 8px 30px rgba(0,0,0,.6)}
 .hero__actions{display:flex;flex-wrap:wrap;gap:.85rem;margin-top:2rem}
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:.9rem 1.18rem;border:1px solid var(--line-strong);background:rgba(215,185,130,.08);color:var(--sand-soft);font-size:.74rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,12px 100%,0 calc(100% - 12px));transition:.25s ease}
 .btn:hover{background:rgba(215,185,130,.16);transform:translateY(-1px);border-color:var(--sand)}
 .btn--primary{background:var(--sand);color:#140e08;border-color:var(--sand)}
 .btn--primary:hover{background:var(--sand-soft);color:#100b07}
-.hero__chips{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:2.3rem;max-width:780px}
+.hero__chips{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:2.3rem;max-width:min(720px,54vw)}
 .chip{border:1px solid rgba(215,185,130,.18);background:rgba(9,7,4,.42);padding:.46rem .62rem;color:var(--muted);font-size:.66rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
 
 .scene{min-height:92svh;display:grid;align-items:center;padding:7rem 1rem;position:relative;overflow:hidden;border-top:1px solid rgba(215,185,130,.08)}
@@ -156,12 +156,21 @@ strong{color:var(--sand-soft);font-weight:600}
 
 .cta{min-height:82svh;text-align:center;background:radial-gradient(circle at 50% 10%,rgba(185,131,52,.16),transparent 35%),linear-gradient(180deg,var(--void),#120805 70%,var(--void));display:grid;place-items:center;padding:7rem 1rem;border-top:1px solid rgba(215,185,130,.08)}
 .cta__inner{max-width:850px;margin:0 auto}.cta .display{margin:.85rem auto 1.2rem}.cta .body{margin:0 auto 2rem}
+.request-form{display:grid;grid-template-columns:1fr;gap:.85rem;margin:2rem auto 0;max-width:680px;text-align:left}
+.request-form__row{display:grid;grid-template-columns:1fr;gap:.85rem}
+.request-form label{display:grid;gap:.45rem;color:var(--muted);font-size:.66rem;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
+.request-form input{width:100%;min-height:52px;border:1px solid rgba(215,185,130,.24);background:rgba(7,6,4,.66);color:var(--sand-soft);padding:.9rem 1rem;font:inherit;outline:none}
+.request-form input:focus{border-color:var(--sand);box-shadow:0 0 0 3px rgba(215,185,130,.12)}
+.request-form button{justify-self:center;border:0;cursor:pointer;margin-top:.35rem}
+.request-form__note{margin:.55rem auto 0;color:var(--muted);font-size:.78rem;line-height:1.55;text-align:center;max-width:560px}
+@media(min-width:680px){.request-form__row{grid-template-columns:1fr 1fr}}
 .footer{border-top:1px solid rgba(215,185,130,.08);padding:2rem 1rem 3rem;text-align:center;color:var(--muted);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase}
 
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.9,.1,1),transform .8s cubic-bezier(.2,.9,.1,1)}
 .reveal--visible{opacity:1;transform:translateY(0)}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
-@media(max-width:680px){.hero__content{padding:7rem 0 3.5rem}.display--hero{font-size:clamp(2.8rem,17vw,4.6rem)}.scene{min-height:auto;padding:5rem 1rem}.back-link{position:absolute}.hero__image img{object-position:58% center}.hero__image::before{background:linear-gradient(180deg,rgba(7,6,4,.44) 0%,rgba(7,6,4,.18) 35%,rgba(7,6,4,.96) 100%),linear-gradient(90deg,rgba(7,6,4,.92),rgba(7,6,4,.18) 64%,rgba(7,6,4,.72))}.book{min-height:300px}}
+@media(max-width:880px){.display--hero,.hero__lede,.hero__chips{max-width:100%}}
+@media(max-width:680px){.hero__content{padding:7rem 0 3.5rem}.display--hero{font-size:clamp(2.8rem,17vw,4.6rem)}.scene{min-height:auto;padding:5rem 1rem}.back-link{position:absolute}.hero__image img{object-position:64% center}.hero__image::before{background:linear-gradient(180deg,rgba(7,6,4,.32) 0%,rgba(7,6,4,.16) 35%,rgba(7,6,4,.96) 100%),linear-gradient(90deg,rgba(7,6,4,.92),rgba(7,6,4,.12) 64%,rgba(7,6,4,.54))}.book{min-height:300px}}
 </style>
 </head>
 <body>
@@ -249,7 +258,7 @@ strong{color:var(--sand-soft);font-weight:600}
       </figure>
     </div>
     <div class="timeline-shell">
-      <div class="timeline-hint" aria-hidden="true">Scroll right</div>
+      <div class="timeline-hint" aria-hidden="true">Timeline scroll right</div>
       <div class="timeline" aria-label="Genesis trilogy timeline">
       <article class="event reveal">
         <div class="event__marker">Before Book One</div>
@@ -329,7 +338,21 @@ strong{color:var(--sand-soft);font-weight:600}
     <p class="eyebrow">Coming soon</p>
     <h2 class="display display--section">The city is already looking for you.</h2>
     <p class="body">Genesis is a cyber-noir romantasy trilogy about dangerous love, bought mercy, and the cost of staying awake when every system around you is designed to make the truth hurt less.</p>
-    <a class="btn btn--primary" href="#top">Return to the signal</a>
+    <form class="request-form" action="https://formsubmit.co/email@skunkworks.pro" method="POST">
+      <input type="hidden" name="_subject" value="Genesis reading sample request">
+      <input type="hidden" name="_template" value="table">
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+      <div class="request-form__row">
+        <label>Full name
+          <input type="text" name="full_name" autocomplete="name" required>
+        </label>
+        <label>Email
+          <input type="email" name="email" autocomplete="email" required>
+        </label>
+      </div>
+      <button class="btn btn--primary" type="submit">Request a reading sample</button>
+      <p class="request-form__note">Sends the request notification to email@skunkworks.pro.</p>
+    </form>
   </div>
 </section>
 
