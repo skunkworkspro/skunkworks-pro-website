@@ -99,15 +99,37 @@ strong{color:var(--sand-soft);font-weight:600}
 .world-card h3{font-family:'Cinzel',Georgia,serif;text-transform:uppercase;letter-spacing:.05em;font-size:1.45rem;color:var(--sand-soft);margin-bottom:.75rem}
 .world-card p{font-size:.88rem;color:var(--smoke);line-height:1.7}
 
+.visual-band{margin-top:2.4rem;display:grid;gap:1rem}
+.visual-card{position:relative;min-height:clamp(320px,48vw,620px);overflow:hidden;border:1px solid rgba(215,185,130,.18);background:#080604;box-shadow:0 34px 100px rgba(0,0,0,.42)}
+.visual-card img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;filter:saturate(.9) contrast(1.08) brightness(.82)}
+.visual-card::before{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(7,6,4,.78),rgba(7,6,4,.2) 52%,rgba(7,6,4,.68)),linear-gradient(180deg,rgba(7,6,4,.08),rgba(7,6,4,.78));pointer-events:none}
+.visual-card::after{content:'';position:absolute;inset:0;z-index:2;background:repeating-linear-gradient(180deg,rgba(255,255,255,.025) 0 1px,transparent 1px 6px);mix-blend-mode:overlay;opacity:.28;pointer-events:none}
+.visual-card__caption{position:absolute;z-index:3;left:clamp(1rem,3vw,2rem);bottom:clamp(1rem,3vw,2rem);max-width:520px;border-left:1px solid rgba(215,185,130,.45);padding-left:1rem}
+.visual-card__caption h3{font-family:'Cinzel',Georgia,serif;text-transform:uppercase;letter-spacing:.05em;font-size:clamp(1.2rem,2.2vw,2rem);line-height:1.05;color:var(--sand-soft);margin-bottom:.45rem}
+.visual-card__caption p{font-size:.88rem;color:var(--smoke);line-height:1.65}
+.portrait-grid{display:grid;grid-template-columns:1fr;gap:1rem;margin-top:2.4rem}
+@media(min-width:820px){.portrait-grid{grid-template-columns:repeat(2,1fr)}.portrait-grid .visual-card{min-height:680px}}
+#heart.scene--split .scene__inner{grid-template-columns:1fr}
+#heart .scene__copy{max-width:980px}
+.scene--image-backed{background:radial-gradient(circle at 18% 14%,rgba(185,131,52,.12),transparent 28%),linear-gradient(180deg,rgba(7,6,4,.92),rgba(18,8,5,.7),rgba(7,6,4,.95))}
+
+
 .timeline{position:relative;margin-top:3rem;border-left:1px solid var(--line-strong)}
 .timeline::before{content:'';position:absolute;left:-1px;top:0;width:1px;height:100%;background:linear-gradient(180deg,var(--blood),var(--amber),transparent)}
 .event{display:grid;grid-template-columns:1fr;gap:1rem;padding:0 0 2.2rem 1.3rem;position:relative}
 .event::before{content:'';position:absolute;left:-6px;top:.25rem;width:11px;height:11px;background:var(--sand);box-shadow:0 0 22px rgba(215,185,130,.55);transform:rotate(45deg)}
-@media(min-width:820px){.event{grid-template-columns:190px 1fr;gap:2rem;padding-left:2rem}}
 .event__marker{font-size:.68rem;font-weight:900;letter-spacing:.2em;text-transform:uppercase;color:var(--amber)}
 .event__title{font-family:'Cinzel',Georgia,serif;text-transform:uppercase;font-size:clamp(1.15rem,2vw,1.8rem);letter-spacing:.04em;color:var(--sand-soft);line-height:1.08;margin-bottom:.55rem}
 .event__body{font-size:.95rem;color:var(--smoke);max-width:680px;line-height:1.72}
 .event__status{display:inline-flex;margin-top:.75rem;padding:.28rem .48rem;border:1px solid rgba(215,185,130,.18);color:var(--muted);font-size:.62rem;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
+@media(min-width:820px){
+  .timeline{display:grid;grid-template-columns:repeat(6,minmax(240px,1fr));gap:0;overflow-x:auto;padding:2.6rem 0 .75rem;border-left:0;border-top:1px solid var(--line-strong);scroll-snap-type:x proximity}
+  .timeline::before{left:0;top:-1px;width:100%;height:1px;background:linear-gradient(90deg,var(--blood),var(--amber),transparent)}
+  .event{display:block;min-width:240px;padding:0 1.4rem 0 0;scroll-snap-align:start}
+  .event::before{left:0;top:-3.05rem}
+  .event__marker{min-height:2.4rem;margin-bottom:1rem}
+  .event__body{max-width:300px}
+}
 
 .book-strip{display:grid;grid-template-columns:1fr;gap:1rem;margin-top:2.5rem}
 @media(min-width:920px){.book-strip{grid-template-columns:repeat(3,1fr)}}
@@ -192,15 +214,27 @@ strong{color:var(--sand-soft);font-weight:600}
       <article class="world-card reveal"><div><div class="world-card__top"><span>02</span><span>Improvised resistance</span></div><h3>Bangkok</h3><p>Rooftop markets, repair warrens, transit arteries, humid safehouses, old gods, new machines, and people who still know how to bend a system.</p></div></article>
       <article class="world-card reveal"><div><div class="world-card__top"><span>03</span><span>The pressure</span></div><h3>Memory</h3><p>Not just technology. Governance, inheritance, grief management, class control, and the most intimate form of power imaginable.</p></div></article>
     </div>
+    <div class="visual-band reveal">
+      <figure class="visual-card">
+        <img src="assets/genesis-environment-photo.png" alt="Near-future Singapore and Bangkok fused into a dark amber cyber-noir cityscape.">
+        <figcaption class="visual-card__caption"><h3>The city behaves like mercy.</h3><p>Luxury, transit, clinics, markets, and surveillance all running on the same hidden machinery.</p></figcaption>
+      </figure>
+    </div>
   </div>
 </section>
 
-<section class="scene" id="timeline">
+<section class="scene scene--image-backed" id="timeline">
   <div class="scene__inner">
     <div class="scene__copy reveal">
       <p class="eyebrow">Spoiler-safe trilogy timeline</p>
       <h2 class="display display--section">The story gets bigger. The wound gets closer.</h2>
       <p class="body">This timeline is designed to create anticipation without giving away the plot: each step names the pressure shift, not the secret underneath it.</p>
+    </div>
+    <div class="visual-band reveal">
+      <figure class="visual-card">
+        <img src="assets/genesis-environment-photo.png" alt="A polished memory clinic rendered as ominous diagnostic architecture in amber cyber-noir light.">
+        <figcaption class="visual-card__caption"><h3>Care becomes infrastructure.</h3><p>The horror is not cruelty. It is comfort made administrative, clinical, and impossible to refuse.</p></figcaption>
+      </figure>
     </div>
     <div class="timeline" aria-label="Genesis trilogy timeline">
       <article class="event reveal">
@@ -254,11 +288,23 @@ strong{color:var(--sand-soft);font-weight:600}
       <p class="body">May is composed, intelligent, and trained by inheritance to survive beautifully. Kit is restrained, observant, and no longer willing to remain useful only at the edges of someone else’s life.</p>
       <p class="body">Their romance is not escape from the plot. It is the test case. If memory can be edited and grief can be softened, then being fully seen becomes the most dangerous intimacy left.</p>
     </div>
-    <div class="matrix reveal">
-      <div class="matrix__item"><h3>May</h3><p>Guarded heiress. Emotional armour. A woman being forced out of every inherited script that once kept her safe.</p></div>
-      <div class="matrix__item"><h3>Kit</h3><p>Quiet danger. Uncomfortable memory. The person who knows what the polished world had to bury to stay beautiful.</p></div>
-      <div class="matrix__item"><h3>The romance</h3><p>Recognition under pressure: desire, class fracture, unfinished history, and the refusal to become unreal for comfort.</p></div>
-      <div class="matrix__item"><h3>The question</h3><p>If a beautiful lie made life easier to bear, would you still choose the person who tells you the truth?</p></div>
+    <div>
+      <div class="portrait-grid reveal">
+        <figure class="visual-card">
+          <img src="assets/genesis-may-photo.png" alt="May and Kit framed in a rain-streaked luxury tower with the city behind them.">
+          <figcaption class="visual-card__caption"><h3>The house setup</h3><p>Polished danger: inheritance, glass, silence, and the first pressure of being seen.</p></figcaption>
+        </figure>
+        <figure class="visual-card">
+          <img src="assets/genesis-kit-photo.png" alt="May and Kit reframed in a humid Bangkok safehouse atmosphere with neon haze.">
+          <figcaption class="visual-card__caption"><h3>The city setup</h3><p>Improvised resistance: heat, signal, borrowed shelter, and desire under surveillance.</p></figcaption>
+        </figure>
+      </div>
+      <div class="matrix reveal">
+        <div class="matrix__item"><h3>May</h3><p>Guarded heiress. Emotional armour. A woman being forced out of every inherited script that once kept her safe.</p></div>
+        <div class="matrix__item"><h3>Kit</h3><p>Quiet danger. Uncomfortable memory. The person who knows what the polished world had to bury to stay beautiful.</p></div>
+        <div class="matrix__item"><h3>The romance</h3><p>Recognition under pressure: desire, class fracture, unfinished history, and the refusal to become unreal for comfort.</p></div>
+        <div class="matrix__item"><h3>The question</h3><p>If a beautiful lie made life easier to bear, would you still choose the person who tells you the truth?</p></div>
+      </div>
     </div>
   </div>
 </section>
