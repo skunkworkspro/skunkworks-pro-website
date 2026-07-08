@@ -44,13 +44,13 @@ h1,h2,h3,h4{font-weight:400;line-height:1.15}
 /* ============================================
    HERO
    ============================================ */
-.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:1.25rem;position:relative;overflow:hidden}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:0;position:relative;overflow:hidden}
 .hero__bg{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden}
 .hero__bg-glow{position:absolute;top:-30%;left:50%;transform:translateX(-50%);width:80vmin;height:80vmin;background:radial-gradient(circle,rgba(120,60,180,.08) 0%,rgba(60,30,90,.04) 40%,transparent 70%);border-radius:50%}
 .hero__bg-vignette{position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 40%,rgba(10,10,11,.95) 80%)}
 .hero__bg-line{position:absolute;top:0;left:50%;width:1px;height:100%;background:linear-gradient(180deg,transparent,rgba(120,114,122,.15),transparent)}
-.hero__stage{position:relative;z-index:1;max-width:1280px;width:100%;margin:0 auto;min-height:calc(100vh - 2.5rem);display:flex;align-items:stretch}
-.hero__art-panel{position:relative;flex:1;min-height:calc(100vh - 2.5rem);border-radius:30px;overflow:hidden;border:1px solid rgba(200,196,192,.12);box-shadow:0 36px 80px rgba(0,0,0,.42),inset 0 1px 0 rgba(255,255,255,.06);background:#0b0b0f}
+.hero__stage{position:relative;z-index:1;max-width:none;width:100%;margin:0;min-height:100vh;display:flex;align-items:stretch}
+.hero__art-panel{position:relative;flex:1;min-height:100vh;border-radius:0;overflow:hidden;border:0;box-shadow:none;background:#0b0b0f}
 .hero__art-panel::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,5,8,.10) 0%,rgba(4,5,8,.06) 28%,rgba(4,5,8,.14) 58%,rgba(4,5,8,.30) 100%);z-index:1}
 .hero__art-panel::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 18% 35%,rgba(122,67,181,.22) 0%,rgba(122,67,181,0) 34%),linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,0) 22%,rgba(0,0,0,.14) 100%);z-index:2;pointer-events:none}
 .hero__art-panel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:left center;display:block}
@@ -62,8 +62,6 @@ h1,h2,h3,h4{font-weight:400;line-height:1.15}
 .hero__actions{display:flex;flex-wrap:wrap;gap:.9rem;justify-content:flex-start;margin-bottom:1.5rem}
 .hero__micro{font-size:.77rem;color:#a199a5;letter-spacing:.04em;max-width:30em;line-height:1.55}
 @media(min-width:980px){
-  .hero{padding:1.5rem}
-  .hero__content{padding:0}
   .hero .body-text,.hero__micro{margin-left:0;margin-right:0}
 }
 @media(max-width:979px){
@@ -113,8 +111,8 @@ h1,h2,h3,h4{font-weight:400;line-height:1.15}
    MAY + KIT SECTION
    ============================================ */
 .may-kit{background:linear-gradient(180deg,#0a0a0b 0%,#0e0d0f 50%,#0a0a0b 100%)}
-.may-kit .section__header{max-width:600px;margin-bottom:1.25rem}
-.may-kit__content{max-width:600px;margin:0 0 2.75rem 0}
+.may-kit .section__header{max-width:600px;margin-bottom:2.75rem}
+.may-kit__body{margin-top:1.25rem}
 .characters{display:grid;grid-template-columns:1fr;gap:1.25rem}
 @media(min-width:640px){.characters{grid-template-columns:1fr 1fr}}
 .character-card{background:rgba(255,255,255,.02);border:1px solid rgba(200,196,192,.06);border-radius:12px;padding:0;overflow:hidden}
@@ -285,9 +283,7 @@ h1,h2,h3,h4{font-weight:400;line-height:1.15}
     <div class="section__header reveal">
       <p class="eyebrow">The heart of it</p>
       <h2 class="headline headline--medium">They are not safe for each other. That’s why they matter.</h2>
-    </div>
-    <div class="may-kit__content reveal reveal--delay-1">
-      <p class="body-text">At the center of Genesis is the relationship between May Tan and Kit — a guarded heiress and the man who grew up beside her but was never allowed to belong cleanly inside her world. Their connection is built on class fracture, unfinished history, mutual recognition, and the dangerous fact that neither of them can become unreal enough to make love easy. In a story about edited pain and managed reality, their relationship is the opposite: chosen, difficult, and fully felt.</p>
+      <p class="body-text may-kit__body">At the center of Genesis is the relationship between May Tan and Kit — a guarded heiress and the man who grew up beside her but was never allowed to belong cleanly inside her world. Their connection is built on class fracture, unfinished history, mutual recognition, and the dangerous fact that neither of them can become unreal enough to make love easy. In a story about edited pain and managed reality, their relationship is the opposite: chosen, difficult, and fully felt.</p>
     </div>
     <div class="characters">
       <div class="character-card reveal reveal--delay-2">
