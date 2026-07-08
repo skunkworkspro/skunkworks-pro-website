@@ -53,24 +53,31 @@ h1,h2,h3,h4{font-weight:400;line-height:1.15}
 .hero__art-panel{position:relative;flex:1;min-height:100vh;border-radius:0;overflow:hidden;border:0;box-shadow:none;background:#0b0b0f}
 .hero__art-panel::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,5,8,.10) 0%,rgba(4,5,8,.06) 28%,rgba(4,5,8,.14) 58%,rgba(4,5,8,.30) 100%);z-index:1}
 .hero__art-panel::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 18% 35%,rgba(122,67,181,.22) 0%,rgba(122,67,181,0) 34%),linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,0) 22%,rgba(0,0,0,.14) 100%);z-index:2;pointer-events:none}
-.hero__art-panel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:left center;display:block}
-.hero__content{position:absolute;z-index:3;left:clamp(1rem,2.6vw,2rem);bottom:clamp(1rem,2.6vw,2rem);width:min(100% - 2rem,560px);padding:0;border-radius:0;background:transparent;backdrop-filter:none;border:0;box-shadow:none;display:flex;flex-direction:column;justify-content:center;text-align:left}
+.hero__art-panel > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:left center;display:block}
+.hero__content{position:absolute;z-index:3;left:clamp(1rem,2.6vw,2rem);top:clamp(1rem,3vw,2.5rem);bottom:auto;width:min(100% - 2rem,560px);padding:0;border-radius:0;background:transparent;backdrop-filter:none;border:0;box-shadow:none;display:flex;flex-direction:column;justify-content:flex-start;text-align:left}
 .hero .body-text{max-width:32em;margin:0 auto}
 .hero__eyebrow{font-family:'Inter',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#aba2b4;margin-bottom:1.15rem}
 .hero__headline{font-family:'Libre Baskerville',Georgia,serif;font-weight:400;font-style:italic;font-size:clamp(2.2rem,5vw,4.5rem);line-height:1.02;margin-bottom:1.25rem;color:#f8f2ee;text-shadow:0 10px 30px rgba(0,0,0,.38)}
 .hero__body{font-size:clamp(1rem,1.28vw,1.14rem);color:#ddd4ce;line-height:1.75;margin-bottom:2rem;max-width:34em;text-shadow:0 8px 24px rgba(0,0,0,.36)}
 .hero__actions{display:flex;flex-wrap:wrap;gap:.9rem;justify-content:flex-start;margin-bottom:1.5rem}
+.hero__mobile-characters{display:none}
+.hero__mobile-character{overflow:hidden;background:#111}
+.hero__mobile-character img{width:100%;aspect-ratio:2/3;object-fit:cover;object-position:center top;filter:saturate(1.06) contrast(1.03);display:block}
 .hero__micro{font-size:.77rem;color:#a199a5;letter-spacing:.04em;max-width:30em;line-height:1.55}
 @media(min-width:980px){
   .hero .body-text,.hero__micro{margin-left:0;margin-right:0}
 }
 @media(max-width:979px){
-  .hero__stage{min-height:auto}
-  .hero__art-panel{min-height:720px}
-  .hero__art-panel::before{background:linear-gradient(180deg,rgba(5,6,10,.22) 0%,rgba(5,6,10,.12) 34%,rgba(7,8,12,.22) 58%,rgba(7,8,12,.30) 100%)}
-  .hero__art-panel img{object-position:center center}
-  .hero__content{left:1rem;right:1rem;bottom:1rem;width:auto;padding:0;text-align:left}
-  .hero__actions{justify-content:flex-start}
+  .hero{min-height:auto;background:#0b0b0f}
+  .hero__stage{min-height:auto;display:block}
+  .hero__art-panel{min-height:auto;padding:1rem 1rem 2rem;overflow:visible}
+  .hero__art-panel::before{background:linear-gradient(180deg,rgba(5,6,10,.34) 0%,rgba(5,6,10,.18) 34%,rgba(7,8,12,.30) 64%,rgba(7,8,12,.78) 100%)}
+  .hero__art-panel > img{object-position:center center;opacity:.28}
+  .hero__content{position:relative;left:auto;right:auto;top:auto;bottom:auto;width:auto;padding:0;text-align:left}
+  .hero__headline{font-size:clamp(2.05rem,10vw,3.2rem);max-width:9em;margin-bottom:1rem}
+  .hero__body{font-size:.98rem;line-height:1.62;margin-bottom:1.2rem;max-width:34em}
+  .hero__actions{justify-content:flex-start;margin-bottom:0}
+  .hero__mobile-characters{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin:1rem 0 1.15rem;max-width:460px}
 }
 
 /* Buttons */
@@ -215,6 +222,14 @@ h1,h2,h3,h4{font-weight:400;line-height:1.15}
       <div class="hero__content">
         <p class="hero__eyebrow hero__animate hero__animate--1">A cyber-noir romantasy trilogy</p>
         <h1 class="hero__headline hero__animate hero__animate--2">Love is dangerous<br>when memory can be rewritten.</h1>
+        <div class="hero__mobile-characters hero__animate hero__animate--3" aria-label="May and Kit character portraits">
+          <div class="hero__mobile-character">
+            <img src="assets/genesis-may-option-a.png" alt="May Tan, composed and emotionally armored in a near-future Genesis character portrait.">
+          </div>
+          <div class="hero__mobile-character">
+            <img src="assets/genesis-kit-option-a.png" alt="Kit, restrained and dangerous in quiet ways in a near-future Genesis character portrait.">
+          </div>
+        </div>
         <p class="hero__body hero__animate hero__animate--3">In a near-future Singapore and Bangkok, grief can be edited, truth can be managed, and power wears the language of mercy. Genesis is a dark, addictive trilogy about memory, class, desire, and the cost of choosing what is real.</p>
         <div class="hero__actions hero__animate hero__animate--4">
           <a href="#closing" class="btn btn--primary">Enter the world of Genesis</a>
